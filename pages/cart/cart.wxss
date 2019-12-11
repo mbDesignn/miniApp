@@ -1,0 +1,4 @@
+/* pages/cart/cart.wxss */
+.cart-add-address{
+  padding:75rpx 18rpx 75rpx 32rpx;
+}

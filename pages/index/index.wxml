@@ -1,0 +1,6 @@
+<!--index.wxml-->
+<view class='container'>
+  <image class='imgTop' src='../../static/images/top.png'></image>
+  <image class='imgMid' src='../../static/images/mid.png'></image>
+  <image class='imgBt' src='../../static/images/bt.png'></image>
+</view>
