@@ -1,0 +1,138 @@
+/* pages/detail/detail.wxss */
+.imgBanner {
+	width: 100%;
+	height: 810rpx;
+}
+
+.de-h {
+	padding: 30rpx 0 30rpx 45rpx;
+	background: #fff;
+	display: flex;
+	flex-direction: row;
+}
+
+.de-h-ml {
+	font-family: SourceHanSansCN-Regular;
+	font-size: 30rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 36rpx;
+	letter-spacing: 0rpx;
+	color: #2b2d2c;
+}
+
+.de-h-mll {
+	font-family: SourceHanSansCN-Regular;
+	font-size: 18rpx;
+	line-height: 36rpx;
+	color: #9e9e9e;
+	display: block;
+}
+
+.de-p-t {
+	width: 42rpx;
+	height: 18rpx;
+	font-family: SourceHanSansCN-Regular;
+	font-size: 18rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 36rpx;
+	letter-spacing: 0rpx;
+	color: #9e9e9e;
+}
+
+.de-p-p {
+	font-family: SourceHanSansCN-Medium;
+	font-size: 36rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 36rpx;
+	letter-spacing: 0rpx;
+	color: #dc1640;
+}
+
+.de-h-info {
+	flex: 8;
+}
+
+.de-h-share {
+	flex: 2;
+}
+
+.de-list-t {
+	padding: 26rpx 0 30rpx;
+	background-color: #f3f3f3;
+	text-align: center;
+}
+
+.de-list-t image {
+	width: 259rpx;
+	height: 30rpx;
+}
+
+.de-list-bd {
+	padding: 10px 10px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.de-list-c {
+	overflow: hidden;
+}
+
+.de-list-c image {
+	width: 225rpx;
+	height: 244rpx;
+}
+
+.de-list-text {
+	font-family: SourceHanSansCN-Regular;
+	font-size: 24rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 20rpx;
+	letter-spacing: 0rpx;
+	color: #2b2d2c;
+	display: block;
+}
+
+.de-list-price {
+	font-family: SourceHanSansCN-Medium;
+	font-size: 30rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	/* line-height: 30rpx; */
+	letter-spacing: 0rpx;
+	color: #dc1640;
+	display: block;
+}
+
+.de-ft {
+	display: flex;
+	justify-content: space-between;
+	border-top: 1rpx solid #d7d7d7;
+}
+
+.de-ft-info {
+	flex: 350rpx;
+}
+
+.de-ft button {
+	flex: 200rpx;
+	height: 102rpx;
+	line-height: 102rpx;
+	border-radius: 0rpx;
+	font-size: 28rpx;
+	color: #fff;
+	background-color: #eca651;
+	-webkit-tap-highlight-color: rgba(255, 0, 0, 0.5);
+	outline: none;
+}
+
+.de-ft button::after {
+	border: 0;
+}
+
+.de-ft button:last-of-type {
+	background-color: #dc1640;
+}
