@@ -17,18 +17,20 @@ page {
 
 .category-container {
   width: 180rpx;
-  background: #ececec;
+  background: #fbfbfb;
   height: 100%;
 }
 
 .category-container .category {
   padding: 30rpx 0rpx;
   text-align: center;
+  font-size: 28rpx;
+  font-family: SourceHanSansCN-Regular;
 }
 
 .category-container .category.active {
   background: #fff;
-  border-left: 4rpx solid #d81e06;
+  border-left: 4rpx solid #dc1640;
   border-top: 1rpx solid #efefef;
   border-bottom: 1rpx solid #efefef;
 }
@@ -43,7 +45,7 @@ page {
 }
 
 .category-container .category .name.active {
-  color: #d81e06;
+  color: #dc1640;
   font-weight: bold;
 }
 
@@ -51,6 +53,26 @@ page {
   flex: 1;
   background: #fff;
   min-height: 100%;
+  padding: 56rpx 90rpx 0 114rpx;
+}
+
+.goods-list{
+  display: flex;
+  flex-wrap:wrap;
+}
+
+.goods-container .goods-item{
+  width: 180rpx;
+  /* height: 272rpx; */
+}
+.goods-container .goods-item .pic{
+  max-width: 170rpx;
+  max-height: 250rpx;
+}
+
+.goods-container .goods-item .name{
+  font-size: 22rpx;
+  /* height: 22rpx; */
 }
 
 .goods-container .title {
@@ -117,7 +139,7 @@ page {
 }
 
 .goods-container .goods .soldInfo .good-price-box .price {
-  color: #d81e06;
+  color: #dc1640;
   margin-top: 10rpx;
   width: 120rpx;
   font-size: 28rpx;
@@ -138,9 +160,9 @@ page {
 }
 
 .goods-container .goods .soldInfo .good-sales-box .number {
-  color: #d81e06;
+  color: #dc1640;
   padding: 2px;
-  border: 1px solid #d81e06;
+  border: 1px solid #dc1640;
   border-radius: 5rpx;
 }
 
@@ -152,3 +174,5 @@ page {
   -webkit-box-orient: vertical;
   word-break: break-all;
 }
+
+
