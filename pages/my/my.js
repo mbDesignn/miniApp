@@ -20,22 +20,22 @@ Page({
     })
   },
   onShow() {
-    const _this = this
-    this.setData({
-      version: CONFIG.version,
-      vipLevel: app.globalData.vipLevel
-    })
-    AUTH.checkHasLogined().then(isLogined => {
-      this.setData({
-        wxlogin: isLogined
-      })
-      if (isLogined) {
-        _this.getUserApiInfo();
-        _this.getUserAmount();
-      }
-    })
-    // 获取购物车数据，显示TabBarBadge
-    TOOLS.showTabBarBadge();
+    // const _this = this
+    // this.setData({
+    //   version: CONFIG.version,
+    //   vipLevel: app.globalData.vipLevel
+    // })
+    // AUTH.checkHasLogined().then(isLogined => {
+    //   this.setData({
+    //     wxlogin: isLogined
+    //   })
+    //   if (isLogined) {
+    //     _this.getUserApiInfo();
+    //     _this.getUserAmount();
+    //   }
+    // })
+    // // 获取购物车数据，显示TabBarBadge
+    // TOOLS.showTabBarBadge();
   },
   onGotUserInfo(e) {
     if (!e.detail.userInfo) {

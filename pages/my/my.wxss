@@ -1,7 +1,155 @@
 /* @import "/template/login/index.wxss"; */
 
+.my-container{
+  min-height: 1100rpx;
+  /* overflow: hidden;
+  overflow-y: hidden; */
+  background-color: #fbfbfb;
+  position: relative;
+}
+.my-container .my-head{
+  width: 750rpx;
+  height: 412rpx;
+  background-color: orange;
+ 
+  /* background-image: url('../../static/images/my/mybg.png'); */
+}
+.my-head .head-container{
+  width: 750rpx;
+  height: 277rpx;
+  display: flex;
+  align-items: center;
+}
+.userinfo {
+  flex: 1;
+	display: flex;
+	/* flex-direction: column; */
+	align-items: center;
+  width: 750rpx;
+  /* padding-top: 83rpx; */
+  padding-left: 17rpx;
+}
+.userinfo .avatar {
+	width: 160rpx;
+	height: 160rpx;
+}
+.info {
+  padding-left: 23rpx;
+  color: #ffffff;
+}
+.info .nickname {
+  font-size: 36rpx;
+}
+.info .phone {
+  font-size: 24rpx;
+}
 
-.container{
+.brandinfo{
+  margin-top: 58rpx;
+  margin-right: 18rpx;
+  padding: 0 30rpx;
+	height: 35rpx;
+	background-color: #000000;
+	border-radius: 18px;
+	opacity: 0.6;
+  font-size: 24rpx;
+  color: #fff;
+}
+
+.my-content{
+  position: absolute;
+  top: 277rpx;
+  width: 711rpx;
+  padding: 21rpx;
+}
+.my-content .order{
+  background: #fff;
+  border-radius: 10rpx;
+}
+.my-item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 74rpx;
+  padding-left: 48rpx;
+  padding-right: 30rpx;
+  border-bottom: 1px solid #eee;
+}
+.my-item .my-btn{
+  font-size: 30rpx;
+	color: #1d1d1d;
+}
+.my-item .all-btn{
+  font-size: 24rpx;
+	color: #acacac;
+}
+.order-shortcut {
+  display: flex;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  justify-content: space-around;
+}
+.order-shortcut .item {
+  display: flex;
+  flex-direction: column;
+  width: 150rpx;
+  text-align: center;
+}
+.order-shortcut .item .icon {
+  width: 67rpx;
+  height: 67rpx;
+  margin-left: 45rpx;
+}
+.order-shortcut .item .text {
+  font-size: 12px;
+}
+
+.banner{
+  margin-top: 18rpx;
+  border-radius: 10rpx;
+  height: 248rpx;
+}
+.banner .banner-image{
+  width: 100%;
+	height: 248rpx;
+}
+
+.serves{
+  margin-top: 18rpx;
+  border-radius: 10rpx;
+  background: #fff;
+}
+.serves .serves-item{
+  height: 75rpx;
+  padding-left: 24rpx;
+  padding-right: 14rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+}
+.serves-item .serves-info{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.serves-info .icon{
+  width: 38rpx;
+  height: 38rpx;
+  
+}
+.serves-info .name{
+  margin-left: 14px;
+  color: #1d1d1d;
+  font-size: 24rpx;
+}
+
+.serves-item .right-btn{
+  color:  #898989;
+}
+
+
+/* .container{
   min-height: 100%;
   overflow: hidden;
   overflow-y: hidden;
@@ -72,36 +220,16 @@
     padding-left: 100rpx;
 }
 
-.order-shortcut {
-  display: flex;
-  padding-top: 20rpx;
-  padding-bottom: 20rpx;
-}
-.order-shortcut .item {
-  display: flex;
-  flex-direction: column;
-  width: 150rpx;
-  text-align: center;
-}
-.order-shortcut .item .icon {
-  width: 67rpx;
-  height: 67rpx;
-  margin-left: 45rpx;
-}
-.order-shortcut .item .text {
-  font-size: 12px;
-}
+
 .to-authorize{
   border: none;
   padding: 0rpx;
   margin: 0rpx;
   background: none;
-  border: none;
   height: auto;
   line-height: auto;
 }
-/* 绑定手机号 */
 .bind-phone-number{
   margin: 20rpx;
   width: 100%;
-}
+} */

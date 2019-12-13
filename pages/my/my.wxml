@@ -1,6 +1,82 @@
-<import src="/template/login/index.wxml" />
+<view class="my-container">
+  <view class="my-head">
+    <view class="head-container">
+      <view class="userinfo" >
+        <image class="avatar" src="../../static/images/my/header.png" background-size="cover"></image>
+        <view class="info">
+          <view class="nickname">昵称123</view>
+          <view class="phone">手机号：159****5601</view>
+        </view>
+      </view>
+      <view class="brandinfo">品牌积分：--</view>
+    </view>
+  </view>
+   <view class="my-content">
+    <view class="order">
+      <view class="my-item">
+        <view class="my-btn">我的订单</view>
+        <view class="all-btn">全部订单 ></view>
+      </view>
+      <view class='order-shortcut'>
+        <view class='item' bindtap='goOrder' data-type="0">
+          <image class="icon" src="/static/images/order/topay.png" background-size="cover"></image>
+          <view class='text'>待付款</view>
+        </view>
+         <view class='item' bindtap='goOrder' data-type="2">
+          <image class="icon" src="/static/images/order/shouhuo.png" background-size="cover"></image>
+          <view class='text'>待收货</view>
+        </view>
+        <!-- <view class='item' bindtap='goOrder' data-type="1">
+          <image class="icon" src="/static/images/order/fahuo.png" background-size="cover"></image>
+          <view class='text'>待发货</view>
+        </view> -->
+        <view class='item' bindtap='goOrder' data-type="3">
+          <image class="icon" src="/static/images/order/pj.png" background-size="cover"></image>
+          <view class='text'>待评价</view>
+        </view>
+        <view class='item' bindtap='goOrder' data-type="99">
+          <image class="icon" src="/static/images/order/shouhou.png" background-size="cover"></image>
+          <view class='text'>退款/售后</view>
+        </view>
+      </view>
+    </view>
+    <view class="banner">
+      <image class="banner-image" src="/static/images/my/banner.png"></image>
+    </view>
+    <view class="serves">
+      <view class="serves-item">
+        <view class="serves-info">
+          <image class="icon" src="/static/images/order/topay.png" background-size="cover"></image>
+          <view class="name">我的优惠券</view> 
+        </view>
+        <view class="right-btn">></view>
+      </view>
+      <view class="serves-item">
+        <view class="serves-info">
+          <image class="icon" src="/static/images/order/topay.png" background-size="cover"></image>
+          <view class="name">在线客服</view> 
+        </view>
+        <view class="right-btn">></view>
+      </view>
+      <view class="serves-item">
+        <view class="serves-info">
+          <image class="icon" src="/static/images/order/topay.png" background-size="cover"></image>
+          <view class="name">品牌故事</view> 
+        </view>
+        <view class="right-btn">></view>
+      </view>
+      <view class="serves-item">
+        <view class="serves-info">
+          <image class="icon" src="/static/images/order/topay.png" background-size="cover"></image>
+          <view class="name">关注公众号</view> 
+        </view>
+        <view class="right-btn">></view>
+      </view>
+    </view>
+   </view>
+</view>
 
-<view class="container">
+<!-- <view class="container">
 	<view wx:if="{{apiUserInfoMap}}" class="userinfo">
 		<image wx:if="{{apiUserInfoMap.base.avatarUrl}}" class="userinfo-avatar" src="{{ apiUserInfoMap.base.avatarUrl }}" background-size="cover"></image>
 		<text class="userinfo-nickname">{{ apiUserInfoMap.base.nick }}</text>
@@ -113,6 +189,4 @@
   <view style="height:20rpx;background: #eee;width:100%;"></view>
   <view class="version">Powered by EastWorld v {{version}}</view>
   <view style="height:20rpx;background: #eee;width:100%;"></view>
-</view>
-
-<template is="apifmLogin" data="{{wxlogin: wxlogin}}" />
+</view> -->
