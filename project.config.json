@@ -52,9 +52,9 @@
 					"query": ""
 				},
 				{
-					"id": -1,
+					"id": 1,
 					"name": "购物车",
-					"pathName": "pages/cart/cart",
+					"pathName": "pages/cart-group/cart-group",
 					"query": "",
 					"scene": null
 				},
@@ -62,15 +62,16 @@
 					"id": -1,
 					"name": "确认订单",
 					"pathName": "pages/book/book",
+					"query": "",
 					"scene": null
 				},
-        {
-          "id": -1,
-          "name": "my",
-          "pathName": "pages/my/my",
-          "query": "",
-          "scene": null
-        }
+				{
+					"id": -1,
+					"name": "my",
+					"pathName": "pages/my/my",
+					"query": "",
+					"scene": null
+				}
 			]
 		}
 	}

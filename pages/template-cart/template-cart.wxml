@@ -1,0 +1,10 @@
+<template name="no-goods">
+    <view class="no-goods">
+      <view class="title-box">
+          您的购物车是空的
+      </view>
+      <view class="to-index-btn" bindtap="toIndexPage">
+        立即购买喜爱的产品
+      </view>
+    </view>
+</template>

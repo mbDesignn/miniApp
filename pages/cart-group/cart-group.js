@@ -1,18 +1,22 @@
-// pages/cart/cart.js
+// pages/cart-group/cart-group.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    list:[1]
+    list:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    if (Math.random()>0.5){
+      this.setData({
+        list:[1,2]
+      })
+    } 
   },
 
   /**
@@ -27,6 +31,11 @@ Page({
    */
   onShow: function () {
 
+  },
+  toIndexPage: function(){
+    wx.switchTab({
+      url: '/pages/goods/goods',
+    })
   },
 
   /**

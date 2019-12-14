@@ -3,7 +3,7 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/detail/detail",
-    "pages/cart/cart",
+    "pages/cart-group/cart-group",
     "pages/book/book",
     "pages/goods/goods",
     "pages/my/my"
@@ -32,7 +32,7 @@
         "text": "商品"
       },
       {
-        "pagePath": "pages/cart/cart",
+        "pagePath": "pages/cart-group/cart-group",
         "iconPath": "static/images/nav/cart-off.png",
         "selectedIconPath": "static/images/nav/cart-on.png",
         "text": "购物车"
