@@ -71,6 +71,13 @@
 					"pathName": "pages/my/my",
 					"query": "",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "关注公众号教程",
+					"pathName": "pages/tutorial/tutorial",
+					"query": "",
+					"scene": null
 				}
 			]
 		}

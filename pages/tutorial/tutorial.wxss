@@ -1,0 +1,19 @@
+.tutorial{
+  background:#f3f3f3;
+  height:100vh;
+  padding: 44rpx 40rpx 0 40rpx;
+}
+.tutorial .tutorial-item{
+ margin-bottom: 66rpx;
+}
+
+.tutorial-item .step-name{
+  background-color: #000000;
+	border-radius: 36rpx;
+  padding-left: 36rpx;
+  padding-right: 34rpx;
+	font-size: 36rpx;
+	color: #ffffff;
+  display: inline-block;
+  margin-bottom: 11rpx;
+}
