@@ -1,0 +1,29 @@
+<view class="coupons">
+  <view class="get-coupons">
+    <view class="get-container">
+      <input class="get-input"  placeholder="请输入兑换码"/>
+      <view class="get-btn" bindtap="default">兑换</view>
+    </view>
+  </view>
+  <view class="coupons-container">
+    <view class="coupons-types">
+      <view class="coupons-tabs">
+        <block wx:for="{{tabs}}" wx:key="*this">
+          <view id="{{index}}" class="tab-item {{activeIndex == index ? 'tab-on' : ''}}" bindtap="tabClick">
+            {{item}}
+          </view>
+        </block>
+      </view>
+    </view>
+    <view class="coupons-list">
+      <view wx:if="{{list.length > 0}}">
+        <view wx:for="{{list}}" class="list-item" wx:key="index">
+          <coupon-item couponInfo="{{item}}"></coupon-item>
+        </view>
+      </view>
+      <view wx:else class="no-data">
+      暂无数据
+      </view>
+    </view>
+  </view>
+</view>

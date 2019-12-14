@@ -9,7 +9,8 @@
     "pages/my/my",
     "pages/tutorial/tutorial",
     "pages/address/address",
-    "pages/myBook/mybook"
+    "pages/myBook/mybook",
+    "pages/coupons/coupons"
   ],
   "window": {
     "backgroundTextStyle": "light",

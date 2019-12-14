@@ -1,0 +1,29 @@
+<view class="coupon-item">
+  <view class="main">
+    <view class="left">
+      <view class="value">
+        <text class="icon">￥</text>
+        <text>{{couponInfo.value}}</text>
+      </view>
+      <view class="condition">
+        {{couponInfo.condition}}
+      </view>
+      <view class="time">
+        {{couponInfo.time}}
+      </view>
+    </view>
+    <view class="right">
+      <view class="range">
+        {{couponInfo.range}}
+      </view>
+      <view class="btn" bindtap="toggle">
+        查看详情{{show ? '^' : '↓'}}
+      </view>
+    </view>
+  </view>
+  <view wx:if="{{show}}" class="detail">
+    <view wx:for="{{couponInfo.details}}" class="item">
+    {{item}}
+    </view>
+  </view>
+</view>
