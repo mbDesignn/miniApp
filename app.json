@@ -6,14 +6,17 @@
     "pages/cart/cart",
     "pages/book/book",
     "pages/goods/goods",
-    "pages/my/my"
+    "pages/my/my",
+    "pages/address/address",
+    "pages/myBook/mybook"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
-  },"tabBar": {
+  },
+  "tabBar": {
     "color": "#6e6d6b",
     "selectedColor": "#e64340",
     "borderStyle": "white",

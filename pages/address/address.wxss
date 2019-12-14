@@ -1,0 +1,41 @@
+/* pages/address/address.wxss */
+.address-w{
+  background: #f3f3f3;
+  height:100vh;
+}
+.address-bd{
+  padding:0 32rpx;
+  background:#fff;
+}
+.address-bd > view{
+  display: flex;
+  align-items: center;
+  min-height: 122rpx;
+  border-bottom: 1px solid #f3f3f3;
+}
+.address-bd > view > text{
+  display: block;
+  width:146rpx;
+}
+
+.address-bd > view:last-of-type{
+  border-bottom:0rpx;
+  text-align: right;
+  /* align-content: flex-end; */
+  /* justify-content: flex-end; */
+}
+
+.phcolor{
+  color: #d2d2d2;
+}
+.address-btn{
+  width: 226rpx;
+	height: 67rpx;
+	line-height: 67rpx;
+	background-color: #000000;
+  border-radius:0;
+  color:#fff;
+}
+.address-btn::after{
+  border:0px;
+}
