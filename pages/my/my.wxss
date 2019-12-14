@@ -1,0 +1,235 @@
+/* @import "/template/login/index.wxss"; */
+
+.my-container{
+  min-height: 1100rpx;
+  /* overflow: hidden;
+  overflow-y: hidden; */
+  background-color: #fbfbfb;
+  position: relative;
+}
+.my-container .my-head{
+  width: 750rpx;
+  height: 412rpx;
+  background-color: orange;
+ 
+  /* background-image: url('../../static/images/my/mybg.png'); */
+}
+.my-head .head-container{
+  width: 750rpx;
+  height: 277rpx;
+  display: flex;
+  align-items: center;
+}
+.userinfo {
+  flex: 1;
+	display: flex;
+	/* flex-direction: column; */
+	align-items: center;
+  width: 750rpx;
+  /* padding-top: 83rpx; */
+  padding-left: 17rpx;
+}
+.userinfo .avatar {
+	width: 160rpx;
+	height: 160rpx;
+}
+.info {
+  padding-left: 23rpx;
+  color: #ffffff;
+}
+.info .nickname {
+  font-size: 36rpx;
+}
+.info .phone {
+  font-size: 24rpx;
+}
+
+.brandinfo{
+  margin-top: 58rpx;
+  margin-right: 18rpx;
+  padding: 0 30rpx;
+	height: 35rpx;
+	background-color: #000000;
+	border-radius: 18px;
+	opacity: 0.6;
+  font-size: 24rpx;
+  color: #fff;
+}
+
+.my-content{
+  position: absolute;
+  top: 277rpx;
+  width: 711rpx;
+  padding: 21rpx;
+}
+.my-content .order{
+  background: #fff;
+  border-radius: 10rpx;
+}
+.my-item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 74rpx;
+  padding-left: 48rpx;
+  padding-right: 30rpx;
+  border-bottom: 1px solid #eee;
+}
+.my-item .my-btn{
+  font-size: 30rpx;
+	color: #1d1d1d;
+}
+.my-item .all-btn{
+  font-size: 24rpx;
+	color: #acacac;
+}
+.order-shortcut {
+  display: flex;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  justify-content: space-around;
+}
+.order-shortcut .item {
+  display: flex;
+  flex-direction: column;
+  width: 150rpx;
+  text-align: center;
+}
+.order-shortcut .item .icon {
+  width: 67rpx;
+  height: 67rpx;
+  margin-left: 45rpx;
+}
+.order-shortcut .item .text {
+  font-size: 12px;
+}
+
+.banner{
+  margin-top: 18rpx;
+  border-radius: 10rpx;
+  height: 248rpx;
+}
+.banner .banner-image{
+  width: 100%;
+	height: 248rpx;
+}
+
+.serves{
+  margin-top: 18rpx;
+  border-radius: 10rpx;
+  background: #fff;
+}
+.serves .serves-item{
+  height: 75rpx;
+  padding-left: 24rpx;
+  padding-right: 14rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+}
+.serves-item .serves-info{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.serves-info .icon{
+  width: 38rpx;
+  height: 38rpx;
+  
+}
+.serves-info .name{
+  margin-left: 14px;
+  color: #1d1d1d;
+  font-size: 24rpx;
+}
+
+.serves-item .right-btn{
+  color:  #898989;
+}
+
+
+/* .container{
+  min-height: 100%;
+  overflow: hidden;
+  overflow-y: hidden;
+}
+
+.userinfo {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  width: 750rpx;
+}
+.userinfo-avatar {
+	width: 160rpx;
+	height: 160rpx;
+}
+.userinfo-nickname {
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  font-size: 14px;
+}
+
+.asset {
+  display: flex;
+  border-top: 1px solid #eee;
+  padding-top:20rpx;
+  padding-bottom:20rpx;
+}
+.asset .item {
+  display: flex;
+  flex-direction: column;
+  width:250rpx;
+  text-align: center;
+  font-size: 13px;
+  line-height: 20px;
+  color:#333;
+}
+.asset .right {
+  border-left: 1px solid #eee;
+}
+
+.version {
+  width:100%;
+  height: 40rpx;
+	line-height: 40rpx;
+	font-size: 24rpx;
+	text-align: center;  
+  padding: 40rpx;
+}
+
+.my-item{
+    width: 100%;
+    background: url(https://cdn.it120.cc/images/weappshop/arrow-right.png) no-repeat 750rpx center;
+    background-size: 16rpx auto,750rpx auto;
+    border-bottom: 1px solid #eee;
+    height: 80rpx;
+    line-height: 80rpx;
+    padding-left: 100rpx;
+    font-size:14px;
+}
+
+.about{
+    width: 100%;
+    background: url(https://cdn.it120.cc/images/weappshop/arrow-right.png) no-repeat 750rpx center;
+    background-size: 16rpx auto,750rpx auto;
+    margin: 20rpx 0; 
+    height: 80rpx;
+    line-height: 80rpx;
+    padding-left: 100rpx;
+}
+
+
+.to-authorize{
+  border: none;
+  padding: 0rpx;
+  margin: 0rpx;
+  background: none;
+  height: auto;
+  line-height: auto;
+}
+.bind-phone-number{
+  margin: 20rpx;
+  width: 100%;
+} */

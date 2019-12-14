@@ -63,7 +63,14 @@
 					"name": "确认订单",
 					"pathName": "pages/book/book",
 					"scene": null
-				}
+				},
+        {
+          "id": -1,
+          "name": "my",
+          "pathName": "pages/my/my",
+          "query": "",
+          "scene": null
+        }
 			]
 		}
 	}
