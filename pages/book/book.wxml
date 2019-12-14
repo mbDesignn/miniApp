@@ -1,0 +1,49 @@
+<!-- 确定订单 -->
+<view class="book-wrap">
+  <view class="add-address">
+   <icon type="success" >di</icon>
+   <text>选择收货地址 ，</text>
+   <text>添加地址</text>
+   <text>></text>
+  </view>
+  <!-- product -->
+  <view class="product">
+    <view class="product-select">
+       <icon type="success" color="#333">di</icon>
+    </view>
+    <view class="product-img">
+      <image src="../../static/images/cart/mini_img.jpg"></image>
+    </view>
+    <view class="product-info">
+      <text class="product-title">勃朗圣泉专研修护舒缓喷雾250ml</text>
+      <text class="product-title-m">婴儿及敏感肌适用</text>
+      <text class="product-price">￥ 165.00</text>
+    </view>
+  </view>
+  <!-- 统计 -->
+  <view class="count-wrap">
+    <view>
+      <text>优惠券</text>
+      <view>
+        <text class="right-txt">暂无可用优惠券</text>
+      </view>
+    </view>
+    <view>
+      <view class="active-wrap">
+        <rich-text class="active-t">活动代码</rich-text>
+        <view class="active-bar">
+          <input class="weui-input" auto-focus placeholder="请输入活动代码"/>
+          <button class="bt-submit">提交</button>
+        </view>
+      </view>
+    </view>
+    <view>
+      <text>订单金额：</text>
+      <text class="right-txt">￥165.00</text>
+    </view>
+    <view>
+      <text>优惠金额：</text>
+      <text class="right-txt">￥165.00</text>
+    </view>
+  </view>
+</view>

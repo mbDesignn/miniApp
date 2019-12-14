@@ -3,12 +3,14 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/detail/detail",
-    "pages/cart/cart"
+    "pages/cart/cart",
+    "pages/book/book"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }

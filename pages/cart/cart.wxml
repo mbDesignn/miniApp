@@ -1,4 +1,68 @@
 <!--pages/cart/cart.wxml-->
-<view class="cart-add-address">
-
+<view class="cart-wrap">
+  <!-- 产品 -->
+  <view class="product">
+    <view class="product-select">
+       <icon type="success" color="#333">di</icon>
+    </view>
+    <view class="product-img">
+      <image src="../../static/images/cart/mini_img.jpg"></image>
+    </view>
+    <view class="product-info">
+      <text class="product-title">勃朗圣泉专研修护舒缓喷雾250ml</text>
+      <text class="product-title-m">婴儿及敏感肌适用</text>
+      <text class="product-price">￥ 165.00</text>
+    </view>
+  </view>
+  <!-- 活动代码 -->
+  <view class="active-wrap">
+    <rich-text class="active-t">活动代码</rich-text>
+    <view class="active-bar">
+      <input class="weui-input" auto-focus placeholder="请输入活动代码"/>
+      <button class="bt-submit">提交</button>
+    </view>
+  </view>
+  <view class='de-list'>
+    <view class='de-list-t'>
+      <image src='../../static/images/de_info_t.png'></image>
+    </view>
+    <view class='de-list-bd'>
+      <view class='de-list-c'>
+        <image src='../../static/images/de_es_img.jpg'></image>
+        <view>
+          <text class='de-list-text'>
+            小绷带修护霜 50ml
+          </text>
+        </view>
+        <view>
+          <text class='de-list-sm'>
+            对抗换季泛红
+          </text>
+        </view>
+        <view>
+          <text class='de-list-price'>
+            ￥285.00
+          </text>
+        </view>
+      </view>
+      <view class='de-list-c'>
+        <image src='../../static/images/de_es_img.jpg'></image>
+        <view>
+        <text class='de-list-text'>
+          小绷带修护霜 50ml
+        </text>
+        </view>
+        <view>
+        <text class='de-list-sm'>
+          对抗换季泛红
+        </text>
+        </view>
+        <view>
+        <text class='de-list-price'>
+          ￥285.00
+        </text>
+        </view>
+      </view>
+    </view>
+  </view>
 </view>
