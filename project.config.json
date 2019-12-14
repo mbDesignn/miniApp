@@ -44,7 +44,8 @@
 		},
 		"miniprogram": {
 			"current": 0,
-			"list": [{
+			"list": [
+				{
 					"id": -1,
 					"name": "详情页面",
 					"pathName": "pages/detail/detail",
@@ -53,7 +54,7 @@
 				{
 					"id": 1,
 					"name": "购物车",
-					"pathName": "pages/cart-group/cart-group",
+					"pathName": "pages/cartGroup/cartGroup",
 					"query": "",
 					"scene": null
 				},
@@ -85,18 +86,24 @@
 					"query": "",
 					"scene": null
 				},
-        {
-          "id": -1,
-          "query": "",
-          "name": "我的订单",
-          "pathName": "pages/myBook/mybook",
-          "scene": null
-        },
+				{
+					"id": -1,
+					"name": "我的订单",
+					"pathName": "pages/myBook/mybook",
+					"query": "",
+					"scene": null
+				},
 				{
 					"id": -1,
 					"name": "优惠券",
 					"pathName": "pages/coupons/coupons",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "品牌故事",
+					"pathName": "pages/brandStory/brandStory",
 					"scene": null
 				}
 			]

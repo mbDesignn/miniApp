@@ -3,14 +3,15 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/detail/detail",
-    "pages/cart-group/cart-group",
+    "pages/cartGroup/cartGroup",
     "pages/book/book",
     "pages/goods/goods",
     "pages/my/my",
     "pages/tutorial/tutorial",
     "pages/address/address",
     "pages/myBook/mybook",
-    "pages/coupons/coupons"
+    "pages/coupons/coupons",
+    "pages/brandStory/brandStory"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -36,7 +37,7 @@
         "text": "商品"
       },
       {
-        "pagePath": "pages/cart-group/cart-group",
+        "pagePath": "pages/cartGroup/cartGroup",
         "iconPath": "static/images/nav/cart-off.png",
         "selectedIconPath": "static/images/nav/cart-on.png",
         "text": "购物车"

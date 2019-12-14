@@ -1,0 +1,3 @@
+<view class="brand-story">
+  <image class="story" wx:for="{{list}}" src="{{item.url}}" mode="widthFix"></image>
+</view>
