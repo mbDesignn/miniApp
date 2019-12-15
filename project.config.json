@@ -44,7 +44,8 @@
 		},
 		"miniprogram": {
 			"current": 0,
-			"list": [{
+			"list": [
+				{
 					"id": -1,
 					"name": "详情页面",
 					"pathName": "pages/detail/detail",

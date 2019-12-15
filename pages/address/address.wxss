@@ -21,14 +21,16 @@
 .address-bd > view:last-of-type{
   border-bottom:0rpx;
   text-align: right;
+  display: flex;
   /* align-content: flex-end; */
-  /* justify-content: flex-end; */
+  justify-content: flex-end;
 }
 
 .phcolor{
   color: #d2d2d2;
 }
 .address-btn{
+  margin:0rpx;
   width: 226rpx;
 	height: 67rpx;
 	line-height: 67rpx;

@@ -19,7 +19,7 @@
       <text>详细地址</text>
       <input placeholder-class="phcolor" auto-focus placeholder="填写您的详细收件地址"/>
     </view>
-    <view>
+    <view class="">
       <button class="address-btn">确认添加</button>
     </view>
   </view>

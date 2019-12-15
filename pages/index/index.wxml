@@ -1,6 +1,123 @@
 <!--index.wxml-->
 <view class='container'>
   <image class='imgTop' src='../../static/images/top.png'></image>
-  <image class='imgMid' src='../../static/images/mid.png'></image>
+  <view class="column-f">
+    <view class="column-f-bd colum-shadow">
+      <image class="com-img" src="../../static/images/index/prd_1.jpg"></image>
+      <view class="prd-info prd-pt">
+        <text>纵享“水微针”般细腻感</text>
+        <text>专研修护舒缓喷雾</text>
+        <view>
+          <text>￥</text>
+          <text>165</text>
+          <text>/250ml</text>
+        </view>
+        <button>立即订购 ></button>
+        <!-- <text>舒新水为产品昵称，产品注册名为勃朗圣泉保湿修护精华水</text> -->
+      </view>
+    </view>
+  </view>
+  <view class="column-s">
+    <view class="column-s-bd colum-shadow">
+      <image class="com-img" src="../../static/images/index/prd_2.jpg"></image>
+      <view class="prd-info prd-pt">
+        <text>纵享“水微针”般细腻感</text>
+        <text>专研修护舒缓喷雾</text>
+        <view>
+          <text>￥</text>
+          <text>165</text>
+          <text>/250ml</text>
+        </view>
+        <button>立即订购 ></button>
+        <!-- <text>舒新水为产品昵称，产品注册名为勃朗圣泉保湿修护精华水</text> -->
+      </view>
+    </view>
+  </view>
+  <view class="column-t">
+    <view class="column-t-bd colum-shadow">
+      <image class="com-img" src="../../static/images/index/prd_3.jpg"></image>
+      <view class="prd-info prd-pt">
+        <text>纵享“水微针”般细腻感</text>
+        <text>专研修护舒缓喷雾</text>
+        <view>
+          <text>￥</text>
+          <text>165</text>
+          <text>/250ml</text>
+        </view>
+        <button>立即订购 ></button>
+        <!-- <text>舒新水为产品昵称，产品注册名为勃朗圣泉保湿修护精华水</text> -->
+      </view>
+    </view>
+  </view>
+  <view class="column-fo">
+    <view class="column-fo-bd colum-shadow">
+      <image class="com-img" src="../../static/images/index/prd_4.jpg"></image>
+      <view class="prd-info prd-pt">
+        <text>纵享“水微针”般细腻感</text>
+        <text>专研修护舒缓喷雾</text>
+        <view>
+          <text>￥</text>
+          <text>165</text>
+          <text>/250ml</text>
+        </view>
+        <button>立即订购 ></button>
+        <text>舒新水为产品昵称，产品注册名为勃朗圣泉保湿修护精华水</text>
+      </view>
+    </view>
+  </view>
+  <view class="column-fi">
+    <view class="column-fi-bd colum-shadow">
+      <view class="prd-info prd-pt">
+        <text class="prd-text">即刻舒缓 改善肤质</text>
+        <text>专研修护液精华</text>
+        <view>
+          <text>￥</text>
+          <text>165</text>
+          <text>/250ml</text>
+        </view>
+        <button>立即订购 ></button>
+        <text>舒新水为产品昵称，产品注册名为勃朗圣泉保湿修护精华水</text>
+      </view>
+      <view class="prd-info prd-pt">
+        <text class="prd-text">闭口福音 一抹细嫩滑</text>
+        <text>专研修护舒缓喷雾</text>
+        <view>
+          <text>￥</text>
+          <text>165</text>
+          <text>/250ml</text>
+        </view>
+        <button>立即订购 ></button>
+        <text>舒新水为产品昵称，产品注册名为勃朗圣泉保湿修护精华水</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="column-si">
+    <view class="column-si-bd colum-shadow">
+      <view class="prd-info prd-pt">
+        <text class="prd-text">即刻舒缓 改善肤质</text>
+        <text>专研修护液精华</text>
+        <view>
+          <text>￥</text>
+          <text>165</text>
+          <text>/250ml</text>
+        </view>
+        <button>立即订购 ></button>
+        <text>舒新水为产品昵称，产品注册名为勃朗圣泉保湿修护精华水</text>
+      </view>
+      <view class="prd-info prd-pt">
+        <text class="prd-text">闭口福音 一抹细嫩滑</text>
+        <text>专研修护舒缓喷雾</text>
+        <view>
+          <text>￥</text>
+          <text>165</text>
+          <text>/250ml</text>
+        </view>
+        <button>立即订购 ></button>
+        <text>舒新水为产品昵称，产品注册名为勃朗圣泉保湿修护精华水</text>
+      </view>
+    </view>
+  </view>
+  <!-- <image class='imgMid' src='../../static/images/mid.png'></image> -->
   <image class='imgBt' src='../../static/images/bt.png'></image>
 </view>
