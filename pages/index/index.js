@@ -3,25 +3,42 @@
 const app = getApp()
 
 Page({
-  onShareAppMessage() {
-    return {
-      title: 'swiper',
-      path: 'page/component/pages/swiper/swiper'
-    }
-  },
   data: {
     // motto: 'Hello World',
     // userInfo: {},
     // hasUserInfo: false,
     // canIUse: wx.canIUse('button.open-type.getUserInfo')
-    data: {
-      imgUrls: ['http://139.224.72.205/images/loreal/top.png', 'http://139.224.72.205/images/loreal/top.png', 'http://139.224.72.205/images/loreal/top.png'],
-      indicatorDots: true,
-      vertical: true,
-      autoplay: true,
-      interval: 2000,
-      duration: 500
-    }
+    imgData: [
+      "http://139.224.72.205/images/loreal/top.png",
+      "http://139.224.72.205/images/loreal/top.png",
+      "http://139.224.72.205/images/loreal/top.png",
+      "http://139.224.72.205/images/loreal/top.png"
+    ],
+    width:750,
+    height: 0,
+  },
+  setContainerHeight: function (e) {
+
+    //图片的原始宽度
+    var imgWidth = e.detail.width;
+
+    //图片的原始高度
+    var imgHeight = e.detail.height;
+
+    //同步获取设备宽度
+    var sysInfo = wx.getSystemInfoSync();
+    console.log("sysInfo:", sysInfo);
+
+    //获取屏幕的宽度
+    var screenWidth = sysInfo.screenWidth;
+
+    //获取屏幕和原图的比例
+    var scale = screenWidth / imgWidth;
+
+    //设置容器的高度
+    this.setData({
+      height: imgHeight
+    })
   },
   //事件处理函数
   bindViewTap: function() {
@@ -29,13 +46,13 @@ Page({
       url: '../logs/logs'
     })
   },
-  onLoad: function () {
+  onLoad: function() {
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
         hasUserInfo: true
       })
-    } else if (this.data.canIUse){
+    } else if (this.data.canIUse) {
       // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
       // 所以此处加入 callback 以防止这种情况
       app.userInfoReadyCallback = res => {
