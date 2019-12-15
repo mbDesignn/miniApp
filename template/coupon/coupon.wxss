@@ -1,0 +1,43 @@
+
+.coupon-item .main {
+  border-top:10rpx solid #fff; 
+  /* border-bottom: 10rpx solid #fff; */
+  background-color: #b41b16;
+	height: 219rpx;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+}
+.main .left{
+  margin: 48rpx 0 0 30rpx;
+  font-size: 24rpx;
+}
+.left .value{
+  font-size: 90rpx;
+  line-height: 36rpx
+}
+.value .icon{
+  font-size: 28rpx;
+}
+.left .condition{
+  margin-top: 18rpx;
+}
+.left .time{
+  margin-top: 10rpx;
+}
+.main .right{
+  margin: 24rpx 30rpx 0 0;
+  font-size: 24rpx;
+}
+.right .btn{
+  margin-top: 112rpx;
+  text-align: right;
+}
+
+.detail{
+  background-color: #f3f3f3;
+  font-size: 20rpx;
+  color: #959595;
+  padding: 20rpx 0 26rpx 30rpx;
+  line-height: 36rpx
+}

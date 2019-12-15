@@ -1,0 +1,59 @@
+@import "/template/coupon/coupon.wxss";
+.coupons{
+  background:#f3f3f3;
+}
+.coupons .get-coupons{
+  background: #fff;
+  padding: 43rpx 50rpx 40rpx 50rpx;
+}
+.get-coupons .get-container{
+  display: flex;
+  align-items: center;
+  border-bottom: 1rpx solid #ccc;
+  justify-content: space-between;
+  padding-bottom: 18rpx;
+}
+.get-container .get-btn{
+  width: 131rpx;
+	height: 63rpx;
+	background-color: #000;
+  font-size: 30rpx;
+	color: #fff;
+  text-align: center;
+  line-height:  63rpx;
+}
+
+.coupons-container{
+  margin-top: 31rpx;
+  background: #fff;
+}
+.coupons-tabs{
+  display: flex;
+  justify-content: space-around;
+  line-height: 36rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+.coupons-tabs .tab-item{
+  font-family: SourceHanSansCN-Regular;
+  font-size: 30rpx;
+  color: #acacac;
+  padding: 37rpx 18rpx 42rpx 18rpx;
+}
+.coupons-tabs .tab-on{
+  font-family: SourceHanSansCN-Bold;
+  font-size: 30rpx;
+  color: #1d1d1d;
+  border-bottom: 4rpx solid #b41b16;
+}
+
+.coupons-list{
+  padding: 17rpx 60rpx;
+}
+.coupons-list .list-item{
+  margin-bottom: 33rpx;
+}
+
+.no-data{
+  text-align: center;
+  line-height: 400rpx;
+}
