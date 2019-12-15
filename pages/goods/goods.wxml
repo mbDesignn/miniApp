@@ -1,8 +1,7 @@
 <!--pages/category/category.wxml-->
 
 <view class="container">
-  <view class="searchbar">
-  </view>
+  <search-bar class="my-searchbar"></search-bar>
   <view class="content-container">
     <scroll-view class="category-container" scroll-y="true" scroll-with-animation="true">
       <view class="category {{categorySelected.id==category.id?'active':''}}" wx:for="{{categories}}" wx:for-item="category" wx:key="id" data-id="{{category.id}}" bindtap="onCategoryClick">

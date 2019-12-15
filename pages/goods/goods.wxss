@@ -7,6 +7,9 @@ page {
   height: 100%;
   overflow: hidden;
 }
+.container .my-searchbar{
+  width: 100%;
+}
 
 .content-container {
   display: -webkit-flex;
