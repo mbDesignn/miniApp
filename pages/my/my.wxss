@@ -36,6 +36,7 @@
 .userinfo .avatar {
 	width: 160rpx;
 	height: 160rpx;
+  border-radius:80rpx;
 }
 .info {
   padding-left: 23rpx;

@@ -81,27 +81,11 @@ Page({
     });
   },
   getGoodsList: function () {
-    let that = this;
-    WXAPI.goods({
-      categoryId: that.data.categorySelected.id,
-      page: 1,
-      pageSize: 100000
-    }).then(function (res) {
-      if (res.code == 404 || res.code == 700) {
-        return
-      }
-      that.setData({
-        currentGoods: res.data
-      });
-      console.log(res.data);
-      wx.hideNavigationBarLoading();
-    }).catch((e) => {
-      wx.hideNavigationBarLoading();
-    });
+    this.mockData()
   },
   toDetailsTap: function (e) {
     wx.navigateTo({
-      url: "/pages/goods-details/index?id=" + e.currentTarget.dataset.id
+      url: "/pages/detail/detail?id=" + e.currentTarget.dataset.id
     })
   },
   onCategoryClick: function (e) {
@@ -129,5 +113,18 @@ Page({
       });
       that.getGoodsList();
     }
+    // this.mockData()
+  },
+  mockData(){
+    console.log('-------')
+    let list = []
+    for(let i=1; i<this.data.currentGoods.length; i++){
+      list.push(this.data.currentGoods[i])
+    }
+    list.push(this.data.currentGoods[0])
+    this.setData({
+      currentGoods: list
+    })
   }
+
 })
