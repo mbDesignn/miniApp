@@ -5,14 +5,17 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    goodsId:''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log('0-0-', options)
+    this.setData({
+      goodsId: options.goodsId
+    })
   },
 
   /**
@@ -62,5 +65,15 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  addToCart(){
+    wx.switchTab({
+      url: '/pages/cartGroup/cartGroup'
+    })
+  },
+  gotoBook(){
+    wx.navigateTo({
+      url: '/pages/book/book?goodsId='+this.data.goodsId
+    })
   }
 })

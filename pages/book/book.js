@@ -62,5 +62,15 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  addAddress(){
+    wx.navigateTo({
+      url:"/pages/address/address"
+    })
+  },
+  checkCoupons(){
+    wx.navigateTo({
+      url: "/pages/coupons/coupons"
+    })
   }
 })

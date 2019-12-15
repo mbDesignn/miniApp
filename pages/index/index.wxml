@@ -12,7 +12,7 @@
           <text>165</text>
           <text>/250ml</text>
         </view>
-        <button>立即订购 ></button>
+        <button bindtap="gotoDetai" data-goodsid="1">立即订购 ></button>
         <!-- <text>舒新水为产品昵称，产品注册名为勃朗圣泉保湿修护精华水</text> -->
       </view>
     </view>
@@ -29,7 +29,7 @@
           <text>165</text>
           <text>/250ml</text>
         </view>
-        <button>立即订购 ></button>
+        <button bindtap="gotoDetai" data-goodsid="2">立即订购 ></button>
         <!-- <text>舒新水为产品昵称，产品注册名为勃朗圣泉保湿修护精华水</text> -->
       </view>
     </view>
@@ -46,7 +46,7 @@
           <text>165</text>
           <text>/250ml</text>
         </view>
-        <button>立即订购 ></button>
+        <button bindtap="gotoDetai" data-goodsid="3">立即订购 ></button>
         <!-- <text>舒新水为产品昵称，产品注册名为勃朗圣泉保湿修护精华水</text> -->
       </view>
     </view>
@@ -63,7 +63,7 @@
           <text>165</text>
           <text>/250ml</text>
         </view>
-        <button>立即订购 ></button>
+        <button bindtap="gotoDetai" data-goodsid="4">立即订购 ></button>
         <text>舒新水为产品昵称，产品注册名为勃朗圣泉保湿修护精华水</text>
       </view>
     </view>
@@ -79,7 +79,7 @@
           <text>165</text>
           <text>/250ml</text>
         </view>
-        <button>立即订购 ></button>
+        <button bindtap="gotoDetai" data-goodsid="5">立即订购 ></button>
         <text>舒新水为产品昵称，产品注册名为勃朗圣泉保湿修护精华水</text>
       </view>
       <view class="prd-info prd-pt">
@@ -90,7 +90,7 @@
           <text>165</text>
           <text>/250ml</text>
         </view>
-        <button>立即订购 ></button>
+        <button data-goodsid="6">立即订购 ></button>
         <text>舒新水为产品昵称，产品注册名为勃朗圣泉保湿修护精华水</text>
       </view>
     </view>
@@ -106,7 +106,7 @@
           <text>165</text>
           <text>/250ml</text>
         </view>
-        <button>立即订购 ></button>
+        <button bindtap="gotoDetai" data-goodsid="7">立即订购 ></button>
         <text>舒新水为产品昵称，产品注册名为勃朗圣泉保湿修护精华水</text>
       </view>
       <view class="prd-info prd-pt">
@@ -117,7 +117,7 @@
           <text>165</text>
           <text>/250ml</text>
         </view>
-        <button>立即订购 ></button>
+        <button bindtap="gotoDetai" data-goodsid="8">立即订购 ></button>
         <text>舒新水为产品昵称，产品注册名为勃朗圣泉保湿修护精华水</text>
       </view>
     </view>

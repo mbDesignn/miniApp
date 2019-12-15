@@ -50,5 +50,11 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+  gotoDetai(e){
+    console.log(e)
+    wx.navigateTo({
+      url: '/pages/detail/detail?goodsId=' + e.target.dataset.goodsid,
+    })
   }
 })

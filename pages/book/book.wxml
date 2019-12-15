@@ -3,7 +3,7 @@
   <view class="add-address">
    <icon type="success" >di</icon>
    <text>选择收货地址 ，</text>
-   <text>添加地址</text>
+   <text bindtap="addAddress">添加地址</text>
    <text>></text>
   </view>
   <!-- product -->
@@ -24,7 +24,7 @@
   <view class="count-wrap">
     <view>
       <text>优惠券</text>
-      <view>
+      <view bindtap="checkCoupons">
         <text class="right-txt">暂无可用优惠券</text>
       </view>
     </view>
