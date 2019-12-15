@@ -27,7 +27,7 @@
         <view class="mybook-pr">
           <view class="pr-list-bd">
             <view>
-              <image src="../../static/images/de_es_img.jpg"></image>
+              <image src="http://139.224.72.205/images/loreal/de_es_img.jpg"></image>
               <view class="list-txt-bd">
                 <text>专研修护喷雾250ml</text>
                 <text>X1</text>
@@ -35,7 +35,7 @@
               <text>¥165.00</text>
             </view>
             <view>
-              <image src="../../static/images/de_es_img.jpg"></image>
+              <image src="http://139.224.72.205/images/loreal/de_es_img.jpg"></image>
               <view class="list-txt-bd">
                 <text>专研修护喷雾250ml</text>
                 <text>X1</text>
@@ -48,7 +48,7 @@
           </view>
           <view class="pr-list-bd">
             <view>
-              <image src="../../static/images/de_es_img.jpg"></image>
+              <image src="http://139.224.72.205/images/loreal/de_es_img.jpg"></image>
               <view class="list-txt-bd">
                 <text>专研修护喷雾250ml</text>
                 <text>X1</text>
@@ -90,8 +90,8 @@
         </view>
         <view class="mybook-pr">
           <view class="pr-list">
-            <image src="../../static/images/de_es_img.jpg"></image>
-            <image src="../../static/images/de_es_img.jpg"></image>
+            <image src="http://139.224.72.205/images/loreal/de_es_img.jpg"></image>
+            <image src="http://139.224.72.205/images/loreal/de_es_img.jpg"></image>
           </view>
           <view class="pr-price">
             <text>运费：￥00.00</text>
@@ -124,8 +124,8 @@
         </view>
         <view class="mybook-pr">
           <view class="pr-list">
-            <image src="../../static/images/de_es_img.jpg"></image>
-            <image src="../../static/images/de_es_img.jpg"></image>
+            <image src="http://139.224.72.205/images/loreal/de_es_img.jpg"></image>
+            <image src="http://139.224.72.205/images/loreal/de_es_img.jpg"></image>
           </view>
           <view class="pr-price">
             <text>订单金额：￥165.00</text>
@@ -148,8 +148,8 @@
         </view>
         <view class="mybook-pr">
           <view class="pr-list">
-            <image src="../../static/images/de_es_img.jpg"></image>
-            <image src="../../static/images/de_es_img.jpg"></image>
+            <image src="http://139.224.72.205/images/loreal/de_es_img.jpg"></image>
+            <image src="http://139.224.72.205/images/loreal/de_es_img.jpg"></image>
           </view>
           <view class="pr-price">
             <text>订单金额：￥165.00</text>

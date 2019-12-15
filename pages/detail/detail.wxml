@@ -1,6 +1,6 @@
 <view class='detail-content'>
   <view>
-    <image class='imgBanner' src='../../static/images/detai_banner.jpg'></image>
+    <image class='imgBanner' src='http://139.224.72.205/images/loreal/detai_banner.jpg'></image>
   </view>
   <view class='de-h'>
     <view class='de-h-info'>
@@ -12,16 +12,16 @@
       </view>
     </view>
     <view class='de-h-share'>
-      <text>这是分享！</text>
+      <mp-icon type="outline" icon="share" color="orange" size="{{24}}"></mp-icon>
     </view>
   </view>
   <view class='de-list'>
     <view class='de-list-t'>
-      <image src='../../static/images/de_info_t.png'></image>
+      <image src='http://139.224.72.205/images/loreal/de_info_t.png'></image>
     </view>
     <view class='de-list-bd'>
       <view class='de-list-c'>
-        <image src='../../static/images/de_es_img.jpg'></image>
+        <image src='http://139.224.72.205/images/loreal/de_es_img.jpg'></image>
         <text class='de-list-text'>
           舒缓修红霜
         </text>
@@ -33,7 +33,7 @@
         </text>
       </view>
       <view class='de-list-c'>
-        <image src='../../static/images/de_es_img.jpg'></image>
+        <image src='http://139.224.72.205/images/loreal/de_es_img.jpg'></image>
         <text class='de-list-text'>
           舒缓修红霜
         </text>
@@ -45,7 +45,7 @@
         </text>
       </view>
       <view class='de-list-c'>
-        <image src='../../static/images/de_es_img.jpg'></image>
+        <image src='http://139.224.72.205/images/loreal/de_es_img.jpg'></image>
         <text class='de-list-text'>
           舒缓修红霜
         </text>
