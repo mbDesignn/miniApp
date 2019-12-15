@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    goodsId:''
+    goodsId: '', //1:dbp 2:cica 3:xhs
+    urlList:[]
   },
 
   /**
@@ -15,6 +16,27 @@ Page({
     console.log('0-0-', options)
     this.setData({
       goodsId: options.goodsId
+    })
+    this.getUrlList(options.goodsId)
+  },
+  getUrlList(goodsId){
+    let urlList = [];
+    let baseUrl = 'http://139.224.72.205/images/loreal/'
+    if (goodsId == '1'){
+      for(let i=1; i<8; i++){
+        urlList.push(baseUrl +`dbp/dbp${i}.png`)
+      }
+    } else if (goodsId == '2'){
+      for (let i = 1; i < 16; i++) {
+        urlList.push(baseUrl + `cica/cica${i}.png`)
+      }
+    }else {
+      for (let i = 1; i < 8; i++) {
+        urlList.push(baseUrl + `xhs/xhs${i}.png`)
+      }
+    }
+    this.setData({
+      urlList
     })
   },
 

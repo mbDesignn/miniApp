@@ -153,3 +153,10 @@
 .de-ft button:last-of-type {
 	background-color: #dc1640;
 }
+
+.goods-detai {
+
+}
+.detail-img {
+  width: 100%;
+}

@@ -18,25 +18,25 @@ Page({
     currentGoods: [
       {
         "categoryId": 1872,
-        "goodsId": 120,
+        "goodsId": 2,
         "characteristic": "CICA 50ml",
         "pic": "http://139.224.72.205/images/loreal/goods/cica.png",
       },
       {
         "categoryId": 1872,
-        "goodsId":123,
+        "goodsId":1,
         "characteristic": "大白喷 250ml",
         "pic": "http://139.224.72.205/images/loreal/goods/dbp.png",
       },
       {
         "categoryId": 1872,
-        "goodsId": 128,
+        "goodsId": 3,
         "characteristic": "修红霜 50ml",
         "pic": "http://139.224.72.205/images/loreal/goods/xhs.png",
       },
       {
         "categoryId": 1872,
-        "goodsId": 126,
+        "goodsId": 4,
         "characteristic": "精华水 200ml",
         "pic": "http://139.224.72.205/images/loreal/goods/jhs.png",
       }
@@ -85,7 +85,7 @@ Page({
   },
   toDetailsTap: function (e) {
     wx.navigateTo({
-      url: "/pages/detail/detail?id=" + e.currentTarget.dataset.id
+      url: "/pages/detail/detail?goodsId=" + e.currentTarget.dataset.id
     })
   },
   onCategoryClick: function (e) {
