@@ -1,20 +1,24 @@
 /* @import "/template/login/index.wxss"; */
 
 .my-container{
-  min-height: 1100rpx;
-  /* overflow: hidden;
-  overflow-y: hidden; */
-  background-color: #fbfbfb;
+  min-height: 100vh;
+  background:#f3f3f3;
   position: relative;
 }
 .my-container .my-head{
   width: 750rpx;
   height: 412rpx;
-  background-color: orange;
- 
+  /* background-color: orange; */
+  position: relative;
   /* background-image: url('../../static/images/my/mybg.png'); */
 }
+.my-head .bgimage{
+  width: 100%;
+}
 .my-head .head-container{
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 750rpx;
   height: 277rpx;
   display: flex;

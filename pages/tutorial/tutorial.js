@@ -8,15 +8,15 @@ Page({
     steps: [
       {
       name:'第一步：微信搜索 勃朗圣泉',
-        url:'../../static/images/tutorial/step1.png'
+        url:'http://139.224.72.205/images/loreal/tutorial/step1.png'
       },
       {
         name: '第二步：点击公众号',
-        url: '../../static/images/tutorial/step2.png'
+        url: 'http://139.224.72.205/images/loreal/tutorial/step2.png'
       },
       {
         name: '第三步：关注我们',
-        url: '../../static/images/tutorial/step3.png'
+        url: 'http://139.224.72.205/images/loreal/tutorial/step3.png'
       },
     ]
   },

@@ -6,9 +6,9 @@ Page({
    */
   data: {
    list:[{
-     url:'/static/images/brandStory/story1.png'
+     url:'http://139.224.72.205/images/loreal/brandStory/story1.png'
    }, {
-       url: '/static/images/brandStory/story2.png'
+       url: 'http://139.224.72.205/images/loreal/brandStory/story2.png'
      }]
   },
 

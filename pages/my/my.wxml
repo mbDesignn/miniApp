@@ -1,5 +1,6 @@
 <view class="my-container">
   <view class="my-head">
+    <image class="bgimage" src="{{mybgUrl}}" mode="widthFix"></image>
     <view class="head-container">
       <view class="userinfo" >
         <image class="avatar" src="../../static/images/my/header.png" background-size="cover"></image>
@@ -13,59 +14,59 @@
   </view>
    <view class="my-content">
     <view class="order">
-      <view class="my-item">
+      <view class="my-item" bindtap="gotoOrderlist">
         <view class="my-btn">我的订单</view>
         <view class="all-btn">全部订单 ></view>
       </view>
       <view class='order-shortcut'>
-        <view class='item' bindtap='goOrder' data-type="0">
+        <view class='item' bindtap='gotoOrderlist' data-type="0">
           <image class="icon" src="/static/images/order/topay.png" background-size="cover"></image>
           <view class='text'>待付款</view>
         </view>
-         <view class='item' bindtap='goOrder' data-type="2">
+         <view class='item' bindtap='gotoOrderlist' data-type="1">
           <image class="icon" src="/static/images/order/shouhuo.png" background-size="cover"></image>
           <view class='text'>待收货</view>
         </view>
-        <!-- <view class='item' bindtap='goOrder' data-type="1">
+        <!-- <view class='item' bindtap='goOrder' data-type="2">
           <image class="icon" src="/static/images/order/fahuo.png" background-size="cover"></image>
           <view class='text'>待发货</view>
         </view> -->
-        <view class='item' bindtap='goOrder' data-type="3">
+        <view class='item' bindtap='gotoOrderlist' data-type="3">
           <image class="icon" src="/static/images/order/pj.png" background-size="cover"></image>
           <view class='text'>待评价</view>
         </view>
-        <view class='item' bindtap='goOrder' data-type="99">
+        <view class='item' bindtap='gotoOrderlist' data-type="4">
           <image class="icon" src="/static/images/order/shouhou.png" background-size="cover"></image>
           <view class='text'>退款/售后</view>
         </view>
       </view>
     </view>
     <view class="banner">
-      <image class="banner-image" src="/static/images/my/banner.png"></image>
+      <image class="banner-image" src="{{mybannerUrl}}"></image>
     </view>
     <view class="serves">
-      <view class="serves-item">
+      <view class="serves-item" bindtap="gotoCoupons">
         <view class="serves-info">
           <image class="icon" src="/static/images/order/topay.png" background-size="cover"></image>
           <view class="name">我的优惠券</view> 
         </view>
         <view class="right-btn">></view>
       </view>
-      <view class="serves-item">
+      <view class="serves-item" bindtap="gotoService">
         <view class="serves-info">
           <image class="icon" src="/static/images/order/topay.png" background-size="cover"></image>
           <view class="name">在线客服</view> 
         </view>
         <view class="right-btn">></view>
       </view>
-      <view class="serves-item">
+      <view class="serves-item" bindtap="gotoBrandStory">
         <view class="serves-info">
           <image class="icon" src="/static/images/order/topay.png" background-size="cover"></image>
           <view class="name">品牌故事</view> 
         </view>
         <view class="right-btn">></view>
       </view>
-      <view class="serves-item">
+      <view class="serves-item" bindtap="gotoTutorial">
         <view class="serves-info">
           <image class="icon" src="/static/images/order/topay.png" background-size="cover"></image>
           <view class="name">关注公众号</view> 

@@ -1,7 +1,8 @@
 Page({
   data: {
     wxlogin: true,
-
+    mybgUrl:'http://139.224.72.205/images/loreal/my/mybg.png',
+    mybannerUrl:'http://139.224.72.205/images/loreal/my/banner.png',
     balance: 0.00,
     freeze: 0,
     score: 0,
@@ -36,6 +37,32 @@ Page({
     // })
     // // 获取购物车数据，显示TabBarBadge
     // TOOLS.showTabBarBadge();
+  },
+  gotoOrderlist(){
+    wx.navigateTo({
+      url: '/pages/myBook/mybook',
+    })
+  },
+  gotoCoupons(){
+    wx.navigateTo({
+      url: '/pages/coupons/coupons',
+    })
+  },
+  gotoService() {
+    console.log('跳转客服。。。。')
+    // wx.navigateTo({
+    //   url: '/pages/service/service',
+    // })
+  },
+  gotoBrandStory() {
+    wx.navigateTo({
+      url: '/pages/brandStory/brandStory',
+    })
+  },
+  gotoTutorial() {
+    wx.navigateTo({
+      url: '/pages/tutorial/tutorial',
+    })
   },
   onGotUserInfo(e) {
     if (!e.detail.userInfo) {

@@ -1,9 +1,11 @@
-<view class="tutorial">
-  <view wx:for-items="{{steps}}" wx:key="index" class="tutorial-item">
-    <view class="step-name">
-      {{item.name}}
+<view class="tutorial-container">
+  <view class="tutorial">
+    <view wx:for-items="{{steps}}" wx:key="index" class="tutorial-item">
+      <view class="step-name">
+        {{item.name}}
+      </view>
+      <image class="example" src="{{item.url}}" mode="widthFix">
+      </image>
     </view>
-    <image class="example" src="{{item.url}}" mode="widthFix">
-    </image>
   </view>
 </view>
