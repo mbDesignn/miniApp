@@ -7,7 +7,7 @@
         <icon type="success" color="#333">di</icon>
       </view>
       <view class="product-img">
-        <image src="../../static/images/cart/mini_img.jpg"></image>
+        <image src="http://139.224.72.205/images/loreal/cart/mini_img.jpg"></image>
       </view>
       <view class="product-info">
         <text class="product-title">勃朗圣泉专研修护舒缓喷雾250ml</text>
@@ -25,11 +25,11 @@
     </view>
     <view class='de-list'>
       <view class='de-list-t'>
-        <image src='../../static/images/de_info_t.png'></image>
+        <image src='http://139.224.72.205/images/loreal/de_info_t.png'></image>
       </view>
       <view class='de-list-bd'>
         <view class='de-list-c'>
-          <image src='../../static/images/de_es_img.jpg'></image>
+          <image src='http://139.224.72.205/images/loreal/de_es_img.jpg'></image>
           <view>
             <text class='de-list-text'>
               小绷带修护霜 50ml
@@ -66,6 +66,20 @@
         </view>
       </view>
     </view>
+  </view>
+  <view class="pay-bar">
+    <view>
+      <icon type="success"></icon>
+      <text>全选</text>
+    </view>
+    <view>
+      <view>
+        <text>合计：</text>
+        <text>￥179.00</text>
+      </view>
+      <text>（运费：￥0）</text>
+    </view>
+    <button>前往支付</button>
   </view>
 </template>
 
