@@ -3,13 +3,19 @@
 const app = getApp()
 
 Page({
+  onShareAppMessage() {
+    return {
+      title: 'swiper',
+      path: 'page/component/pages/swiper/swiper'
+    }
+  },
   data: {
     // motto: 'Hello World',
     // userInfo: {},
     // hasUserInfo: false,
     // canIUse: wx.canIUse('button.open-type.getUserInfo')
     data: {
-      imgUrls: ['demo-text-1', 'demo-text-2', 'demo-text-3'],
+      imgUrls: ['http://139.224.72.205/images/loreal/top.png', 'http://139.224.72.205/images/loreal/top.png', 'http://139.224.72.205/images/loreal/top.png'],
       indicatorDots: true,
       vertical: true,
       autoplay: true,
