@@ -175,7 +175,7 @@
   width: 298rpx;
 }
 .pay-bar > button{
-  width:210rpx;
+  width:250rpx;
   height:106rpx;
   line-height:106rpx;
   background-color: #dc1640;
