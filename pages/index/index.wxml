@@ -16,6 +16,7 @@
         <!-- <text>舒新水为产品昵称，产品注册名为勃朗圣泉保湿修护精华水</text> -->
       </view>
     </view>
+    <image src="../../static/images/index/pic_1.jpg"></image>
   </view>
   <view class="column-s">
     <view class="column-s-bd colum-shadow">
@@ -32,6 +33,7 @@
         <!-- <text>舒新水为产品昵称，产品注册名为勃朗圣泉保湿修护精华水</text> -->
       </view>
     </view>
+    <image src="../../static/images/index/pic_2.jpg"></image>
   </view>
   <view class="column-t">
     <view class="column-t-bd colum-shadow">
@@ -48,6 +50,7 @@
         <!-- <text>舒新水为产品昵称，产品注册名为勃朗圣泉保湿修护精华水</text> -->
       </view>
     </view>
+    <image src="../../static/images/index/pic_3.jpg"></image>
   </view>
   <view class="column-fo">
     <view class="column-fo-bd colum-shadow">
@@ -64,6 +67,7 @@
         <text>舒新水为产品昵称，产品注册名为勃朗圣泉保湿修护精华水</text>
       </view>
     </view>
+    <image src="../../static/images/index/pic_4.jpg"></image> 
   </view>
   <view class="column-fi">
     <view class="column-fi-bd colum-shadow">
@@ -90,8 +94,8 @@
         <text>舒新水为产品昵称，产品注册名为勃朗圣泉保湿修护精华水</text>
       </view>
     </view>
+    <image src="../../static/images/index/pic_5.jpg"></image>
   </view>
-
   <view class="column-si">
     <view class="column-si-bd colum-shadow">
       <view class="prd-info prd-pt">
@@ -117,6 +121,7 @@
         <text>舒新水为产品昵称，产品注册名为勃朗圣泉保湿修护精华水</text>
       </view>
     </view>
+    <image src="../../static/images/index/pic_6.jpg"></image>
   </view>
   <!-- <image class='imgMid' src='../../static/images/mid.png'></image> -->
   <image class='imgBt' src='../../static/images/bt.png'></image>

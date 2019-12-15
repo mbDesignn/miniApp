@@ -15,12 +15,26 @@
   box-shadow: 2rpx 3rpx 6rpx #ccc;
 }
 .column-f{
+  position: relative;
+  z-index: 10;
   width:750rpx;
   height:1084rpx;
-  background: url(http://127.0.0.1:8080/pic_1.jpg) no-repeat;
-  background-size:750rpx 1084rpx;
+  /* background: url(https://gitee.com/wnan1981/miniprogram/blob/master/static/images/index/pic_1.jpg) no-repeat;
+  background-size:750rpx 1084rpx; */
+}
+.column-f > image{
+  position: absolute;
+  z-index: 1;
+  width:750rpx;
+  height:1084rpx;
 }
 .column-f-bd{
+  position: absolute;
+  z-index: 2;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   margin: 127rpx auto;
   padding-top: 15rpx;
   width:707rpx;
@@ -31,12 +45,25 @@
   height:625rpx;
 }
 .column-s{
+  position: relative;
   width:750rpx;
   height:970rpx;
-  background: url(http://127.0.0.1:8080/pic_2.jpg) no-repeat;
-  background-size:750rpx 970rpx;
+  /* background: url(https://gitee.com/wnan1981/miniprogram/blob/master/static/images/index/pic_2.jpg) no-repeat;
+  background-size:750rpx 970rpx; */
+}
+.column-s > image{
+  position: absolute;
+  z-index: 1;
+  width:750rpx;
+  height:970rpx;
 }
 .column-s-bd{
+  position: absolute;
+  z-index: 2;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   margin: 16rpx auto;
   padding-top: 15rpx;
   width:707rpx;
@@ -47,12 +74,26 @@
   height:622rpx;
 }
 .column-t{
+  position: relative;
+  z-index: 10;
   width:750rpx;
-  height:970rpx;
-  background: url(http://127.0.0.1:8080/pic_3.jpg) no-repeat;
+  height:964rpx;
+  background: url(https://gitee.com/wnan1981/miniprogram/blob/master/static/images/index/pic_3.jpg) no-repeat;
   background-size:750rpx 970rpx;
 }
+.column-t > image{
+  position: absolute;
+  z-index: 1;
+  width:750rpx;
+  height:964rpx;
+}
 .column-t-bd{
+  position: absolute;
+  z-index: 2;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   margin: 16rpx auto;
   padding-top: 15rpx;
   width:707rpx;
@@ -63,12 +104,26 @@
   height:620rpx;
 }
 .column-fo{
+  position: relative;
+  z-index: 10;
   width:750rpx;
   height:955rpx;
-  background: url(http://127.0.0.1:8080/pic_4.jpg) no-repeat;
-  background-size:750rpx 955rpx;
+  /* background: url(https://gitee.com/wnan1981/miniprogram/blob/master/static/images/index/pic_4.jpg) no-repeat;
+  background-size:750rpx 955rpx; */
+}
+.column-fo > image{
+  position: absolute;
+  z-index: 1;
+  width:750rpx;
+  height:955rpx;
 }
 .column-fo-bd{
+  position: absolute;
+  z-index: 2;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   margin: 16rpx auto;
   padding-top: 15rpx;
   width:707rpx;
@@ -79,12 +134,25 @@
   height:609rpx;
 }
 .column-fi{
+  position: relative;
   width:750rpx;
   height:790rpx;
-  background: url(http://127.0.0.1:8080/pic_5.jpg) no-repeat;
-  background-size:750rpx 790rpx;
+  /* background: url(https://gitee.com/wnan1981/miniprogram/blob/master/static/images/index/pic_5.jpg) no-repeat;
+  background-size:750rpx 790rpx; */
+}
+.column-fi > image{
+  position: absolute;
+  z-index: 1;
+  width:750rpx;
+  height:790rpx;
 }
 .column-fi-bd{
+  position: absolute;
+  z-index: 2;
+  top:0;
+  left: 0;
+  right: 0;
+  /* bottom: 0; */
   margin: 458rpx auto 0 auto;
   width:708rpx;
   height:320rpx;
@@ -101,12 +169,25 @@
   font-size: 30rpx;
 }
 .column-si{
+  position: relative;
   width:750rpx;
   height:794rpx;
-  background: url(http://127.0.0.1:8080/pic_6.jpg) no-repeat;
-  background-size:750rpx 794rpx;
+  /* background: url(https://gitee.com/wnan1981/miniprogram/blob/master/static/images/index/pic_6.jpg) no-repeat;
+  background-size:750rpx 794rpx; */
+}
+.column-si > image{
+  position: absolute;
+  z-index: 1;
+  width:750rpx;
+  height:794rpx;
 }
 .column-si-bd{
+  position: absolute;
+  z-index: 2;
+  top:0;
+  left: 0;
+  right: 0;
+  /* bottom: 0; */
   margin: 433rpx auto 0 auto;
   width:708rpx;
   height:320rpx;
