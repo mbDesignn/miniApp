@@ -1,16 +1,16 @@
 <!--index.wxml-->
 <view class='container'>
   <!-- <image class='imgTop' src='http://139.224.72.205/images/loreal/top.png'></image> -->
-  <swiper autoplay="true" indicator-dots="true" style="width:{{width}}rpx;height:{{height}}rpx;" >
+  <swiper autoplay="true" style="position:relative;width:{{width}}rpx;height:{{height}}rpx;">
     <block wx:for="{{imgData}}" wx:key="index">
-        <swiper-item>
-            <image class='imgTop' bindload='setContainerHeight' src='{{item}}'></image>
-        </swiper-item>
+      <swiper-item>
+        <image class='imgTop' bindload='setContainerHeight' src='{{item}}'></image>
+        <view class="swipe-num">
+          <text>{{index + 1}}</text><text>/</text><text>{{imgData.length}}</text>
+        </view>
+      </swiper-item>
     </block>
-</swiper>
-<!-- <view style="position:absolute;top:900rpx;z-index:100">
-  <text>{{}}</text>
-</view> -->
+  </swiper>
   <view class="column-f">
     <view class="column-f-bd colum-shadow">
       <image class="com-img" src="http://139.224.72.205/images/loreal/index/prd_1.jpg"></image>
