@@ -1,7 +1,9 @@
 .cart-wrap{
+  position: relative;
   padding:20rpx;
   background:#f3f3f3;
-  height:100vh;
+  /* min-height:100vh; */
+  min-height: calc(100vh - 166rpx);
 }
 .product {
   display: flex;
@@ -97,7 +99,9 @@
 	border-radius: 8rpx;
   color:#fff;
 }
-
+.de-list{
+  padding-bottom: 49rpx;
+}
 
 .de-list-t {
 	padding: 83rpx 0 30rpx;
@@ -156,4 +160,54 @@
 	letter-spacing: 0rpx;
 	color: #dc1640;
 	display: block;
+}
+
+.pay-bar{
+  display: flex;
+  width:100vw;
+  height:106rpx;
+  border-bottom:1px solid #d7d7d7;
+}
+.pay-bar > view:nth-of-type(1){
+  width: 242rpx;
+} 
+.pay-bar > view:nth-of-type(2){
+  width: 298rpx;
+}
+.pay-bar > button{
+  width:210rpx;
+  height:106rpx;
+  line-height:106rpx;
+  background-color: #dc1640;
+  border-radius: 0;
+  color:#fff;
+}
+.pay-bar > button::after{
+ border:0;
+}
+.pay-bar > view > view {
+  padding-top:20rpx;
+}
+.pay-bar > view > view text:nth-of-type(2){
+  color: #dc1640;
+}
+.pay-bar > view:nth-of-type(1) {
+  display: flex;
+  align-items: center;
+  justify-content:center;
+}
+.pay-bar > view:nth-of-type(1) text{
+  padding-left:10rpx;
+}
+.pay-bar > view:nth-of-type(2){
+  display: flex;
+  flex-direction: column;
+}
+.pay-bar > view:nth-of-type(2) > text {
+  height:20rpx;
+  font-size: 20rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 1rpx;
+	color: #8d8d8d;
 }
