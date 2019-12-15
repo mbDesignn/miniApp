@@ -3,10 +3,6 @@
   width:100%;
   height:967rpx;
 }
-.imgMid{
-  width:100%;
-  height:5556rpx;
-}
 .imgBt {
   width:100%;
   height:627rpx;
@@ -78,8 +74,8 @@
   z-index: 10;
   width:750rpx;
   height:964rpx;
-  background: url(https://gitee.com/wnan1981/miniprogram/blob/master/static/images/index/pic_3.jpg) no-repeat;
-  background-size:750rpx 970rpx;
+  /* background: url(https://gitee.com/wnan1981/miniprogram/blob/master/static/images/index/pic_3.jpg) no-repeat;
+  background-size:750rpx 970rpx; */
 }
 .column-t > image{
   position: absolute;
@@ -218,7 +214,7 @@
   color: #33a9c1;
 }
 .prd-info > text:nth-of-type(3) {
-  padding-top:12rpx;
+  padding-top:6rpx;
   font-size:12rpx;
   color: #999;
 }
@@ -237,7 +233,7 @@
 }
 
 .prd-info > view {
-  padding-top: 10rpx;
+  margin-bottom: -12rpx;
 }
 
 .prd-info > view > text{
@@ -253,5 +249,5 @@
   font-size: 20rpx;
 }
 .prd-pt{
-  padding-top: 18rpx;
+  padding-top: 24rpx;
 }

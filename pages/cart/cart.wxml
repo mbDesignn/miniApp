@@ -47,7 +47,7 @@
           </view>
         </view>
         <view class='de-list-c'>
-          <image src='../../static/images/de_es_img.jpg'></image>
+          <image src='http://139.224.72.205/images/loreal/de_es_img.jpg'></image>
           <view>
           <text class='de-list-text'>
             小绷带修护霜 50ml

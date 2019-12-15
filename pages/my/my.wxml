@@ -3,7 +3,7 @@
     <image class="bgimage" src="{{mybgUrl}}" mode="widthFix"></image>
     <view class="head-container">
       <view class="userinfo" >
-        <image class="avatar" src="../../static/images/my/header.png" background-size="cover"></image>
+        <image class="avatar" src="http://139.224.72.205/images/loreal/my/header.png" background-size="cover"></image>
         <view class="info">
           <view class="nickname">昵称123</view>
           <view class="phone">手机号：159****5601</view>

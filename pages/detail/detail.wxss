@@ -115,6 +115,23 @@
 
 .de-ft-info {
 	flex: 350rpx;
+  display: flex;
+}
+
+.de-ft-info > view{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-self: center;
+  text-align: center;
+}
+.de-ft-info > view > image{
+  margin: 0 auto;
+  display: block;
+}
+.de-ft-info > view > text{
+  font-size:24rpx;
+  color: #626262;
 }
 
 .de-ft button {

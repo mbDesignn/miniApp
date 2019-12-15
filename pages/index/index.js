@@ -3,11 +3,25 @@
 const app = getApp()
 
 Page({
+  onShareAppMessage() {
+    return {
+      title: 'swiper',
+      path: 'page/component/pages/swiper/swiper'
+    }
+  },
   data: {
-    motto: 'Hello World',
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    // motto: 'Hello World',
+    // userInfo: {},
+    // hasUserInfo: false,
+    // canIUse: wx.canIUse('button.open-type.getUserInfo')
+    data: {
+      imgUrls: ['http://139.224.72.205/images/loreal/top.png', 'http://139.224.72.205/images/loreal/top.png', 'http://139.224.72.205/images/loreal/top.png'],
+      indicatorDots: true,
+      vertical: true,
+      autoplay: true,
+      interval: 2000,
+      duration: 500
+    }
   },
   //事件处理函数
   bindViewTap: function() {
