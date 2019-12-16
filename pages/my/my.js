@@ -3,6 +3,8 @@ Page({
     wxlogin: true,
     mybgUrl:'http://139.224.72.205/images/loreal/my/mybg.png',
     mybannerUrl:'http://139.224.72.205/images/loreal/my/banner.png',
+    showOneButtonDialog: false,
+    oneButton: [{ text: '复制微信号' }],
     balance: 0.00,
     freeze: 0,
     score: 0,
@@ -37,6 +39,20 @@ Page({
     // })
     // // 获取购物车数据，显示TabBarBadge
     // TOOLS.showTabBarBadge();
+  },
+  tapBanner(){
+    this.setData({
+      showOneButtonDialog: true
+    })
+  },
+  tapDialogButton() {
+    this.setData({
+      showOneButtonDialog: false
+    })
+    wx.showToast({
+      title: '复制成功，去添加好友吧',
+      icon: 'none'
+    })
   },
   gotoOrderlist(){
     wx.navigateTo({
