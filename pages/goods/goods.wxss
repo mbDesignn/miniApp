@@ -56,21 +56,28 @@ page {
   flex: 1;
   background: #fff;
   min-height: 100%;
-  padding: 56rpx 90rpx 0 114rpx;
+  /* padding: 56rpx 90rpx 0 114rpx; */
+  padding-left:50rpx;
 }
 
 .goods-list{
   display: flex;
   flex-wrap:wrap;
 }
+.goods-container{
+  display: flex;
+}
 
 .goods-container .goods-item{
-  width: 180rpx;
+  margin-top:44rpx;
+  width: 252rpx;
+  /* flex: 1; */
+  text-align: center;
   /* height: 272rpx; */
 }
 .goods-container .goods-item .pic{
-  max-width: 170rpx;
-  max-height: 250rpx;
+  max-width: 101rpx;
+  max-height: 213rpx;
 }
 
 .goods-container .goods-item .name{
