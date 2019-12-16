@@ -57,7 +57,7 @@ page {
   background: #fff;
   min-height: 100%;
   /* padding: 56rpx 90rpx 0 114rpx; */
-  padding-left:50rpx;
+  padding-left:70rpx;
 }
 
 .goods-list{
@@ -70,7 +70,7 @@ page {
 
 .goods-container .goods-item{
   margin-top:44rpx;
-  width: 252rpx;
+  width: 232rpx;
   /* flex: 1; */
   text-align: center;
   /* height: 272rpx; */
