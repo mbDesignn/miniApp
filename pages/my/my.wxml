@@ -42,39 +42,42 @@
       </view>
     </view>
     <view class="banner">
-      <image class="banner-image" src="{{mybannerUrl}}"></image>
+      <image class="banner-image" src="{{mybannerUrl}}" bindtap="tapBanner"></image>
     </view>
     <view class="serves">
       <view class="serves-item" bindtap="gotoCoupons">
         <view class="serves-info">
-          <image class="icon" src="/static/images/order/topay.png" background-size="cover"></image>
+          <image class="icon" src="/static/images/icon/my_coupons.png" mode="widthFix"></image>
           <view class="name">我的优惠券</view> 
         </view>
         <view class="right-btn">></view>
       </view>
       <view class="serves-item" bindtap="gotoService">
         <view class="serves-info">
-          <image class="icon" src="/static/images/order/topay.png" background-size="cover"></image>
+          <image class="icon" src="/static/images/icon/kef.png" mode="widthFix"></image>
           <view class="name">在线客服</view> 
         </view>
         <view class="right-btn">></view>
       </view>
       <view class="serves-item" bindtap="gotoBrandStory">
         <view class="serves-info">
-          <image class="icon" src="/static/images/order/topay.png" background-size="cover"></image>
+          <image class="icon" src="/static/images/icon/mini_logo.png" mode="widthFix"></image>
           <view class="name">品牌故事</view> 
         </view>
         <view class="right-btn">></view>
       </view>
       <view class="serves-item" bindtap="gotoTutorial">
         <view class="serves-info">
-          <image class="icon" src="/static/images/order/topay.png" background-size="cover"></image>
+          <image class="icon" src="/static/images/icon/wechat.png" mode="widthFix"></image>
           <view class="name">关注公众号</view> 
         </view>
         <view class="right-btn">></view>
       </view>
     </view>
    </view>
+   <mp-dialog title="" show="{{showOneButtonDialog}}" bindbuttontap="tapDialogButton" buttons="{{oneButton}}">
+        <view>点击“复制微信 号”，微信添加好友即可联 系小波浪，领取专属福利， 仅限新人，请勿重复添加。</view>
+    </mp-dialog>
 </view>
 
 <!-- <view class="container">
