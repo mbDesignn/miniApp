@@ -25,7 +25,7 @@
     </view>
     <view class='de-list'>
       <view class='de-list-t'>
-        <image src='http://139.224.72.205/images/loreal/de_info_t.png'></image>
+        <image src='http://139.224.72.205/images/loreal/cart/title.png'></image>
       </view>
       <view class='de-list-bd'>
         <view class='de-list-c'>
@@ -66,8 +66,9 @@
         </view>
       </view>
     </view>
+
   </view>
-  <view class="pay-bar">
+   <view class="pay-bar">
     <view>
       <icon type="success"></icon>
       <text>全选</text>

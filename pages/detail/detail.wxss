@@ -59,6 +59,10 @@
 	flex: 2;
 }
 
+.de-list{
+  padding-bottom: 140rpx;
+}
+
 .de-list-t {
 	padding: 26rpx 0 30rpx;
 	background-color: #f3f3f3;
@@ -108,9 +112,13 @@
 }
 
 .de-ft {
+  position: fixed;
+  bottom:0;
 	display: flex;
 	justify-content: space-between;
 	border-top: 1rpx solid #d7d7d7;
+  width:750rpx;
+  background:#fff;
 }
 
 .de-ft-info {
@@ -141,7 +149,7 @@
 	border-radius: 0rpx;
 	font-size: 28rpx;
 	color: #fff;
-	background-color: #eca651;
+	background-color: #0094b2;
 	-webkit-tap-highlight-color: rgba(255, 0, 0, 0.5);
 	outline: none;
 }
@@ -151,7 +159,7 @@
 }
 
 .de-ft button:last-of-type {
-	background-color: #dc1640;
+	background-color: #173c6b;
 }
 
 .goods-detai {

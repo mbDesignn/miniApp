@@ -15,7 +15,7 @@ Page({
       "http://139.224.72.205/images/loreal/top.png"
     ],
     width:750,
-    height: 0,
+    height: 976,
   },
   setContainerHeight: function (e) {
 

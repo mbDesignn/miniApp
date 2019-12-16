@@ -2,8 +2,7 @@
   position: relative;
   padding:20rpx;
   background:#f3f3f3;
-  /* min-height:100vh; */
-  min-height: calc(100vh - 166rpx);
+  min-height:100vh;
 }
 .product {
   display: flex;
@@ -95,12 +94,12 @@
   width: 154rpx;
 	height: 72rpx;
   line-height:72rpx;
-	background-color: #000000;
+	background-color: #173c6b;
 	border-radius: 8rpx;
   color:#fff;
 }
 .de-list{
-  padding-bottom: 49rpx;
+  padding-bottom: 149rpx;
 }
 
 .de-list-t {
@@ -163,9 +162,12 @@
 }
 
 .pay-bar{
+  position: fixed;
+  bottom:0;
   display: flex;
-  width:100vw;
+  width:750rpx;
   height:106rpx;
+  background: #fff;
   border-bottom:1px solid #d7d7d7;
 }
 .pay-bar > view:nth-of-type(1){
@@ -178,7 +180,7 @@
   width:250rpx;
   height:106rpx;
   line-height:106rpx;
-  background-color: #dc1640;
+  background-color: #173c6b;
   border-radius: 0;
   color:#fff;
 }
