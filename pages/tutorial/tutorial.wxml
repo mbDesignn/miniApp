@@ -1,7 +1,7 @@
 <view class="tutorial-container">
   <view class="tutorial">
     <view wx:for-items="{{steps}}" wx:key="index" class="tutorial-item">
-      <view class="step-name">
+      <view class="step-name" data-text="{{item.name}}" bindtap="copyText">
         {{item.name}}
       </view>
       <image class="example" src="{{item.url}}" mode="widthFix">

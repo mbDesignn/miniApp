@@ -142,7 +142,7 @@
   width:250rpx;
   height:106rpx;
   line-height:106rpx;
-  background-color: #dc1640;
+  background-color: #173c6b;
   border-radius: 0;
   color:#fff;
 }

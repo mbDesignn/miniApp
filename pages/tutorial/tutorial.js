@@ -1,6 +1,5 @@
 // pages/tutorial/tutorial.js
 Page({
-
   /**
    * 页面的初始数据
    */
@@ -18,9 +17,23 @@ Page({
         name: '第三步：关注我们',
         url: 'http://139.224.72.205/images/loreal/tutorial/step3.png'
       },
-    ]
+    ],
   },
-
+  copyText: function (event) {
+    const text = event.target.dataset.text
+    if (text.includes('勃朗圣泉')) {
+      wx.setClipboardData({
+        //准备复制的数据
+        data: '勃朗圣泉',
+        success: function (res) {
+          wx.showToast({
+            title: '复制勃朗圣泉成功',
+          });
+        }
+      })
+    }
+  },
+  
   /**
    * 生命周期函数--监听页面加载
    */

@@ -60,7 +60,7 @@
 }
 
 .de-list{
-  padding-bottom: 140rpx;
+  padding-bottom: 30rpx;
 }
 
 .de-list-t {
@@ -163,8 +163,9 @@
 }
 
 .goods-detai {
-
+  padding-bottom: 120rpx;
 }
 .detail-img {
+  margin-top:-13rpx;
   width: 100%;
 }

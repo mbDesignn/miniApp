@@ -1,3 +1,7 @@
 <view class="brand-story">
-  <image class="story" wx:for="{{list}}" wx:key="index" src="{{item.url}}" mode="widthFix"></image>
+  <!-- <image class="story" wx:for="{{list}}" wx:key="index" src="{{item.url}}" mode="widthFix"></image> -->
+  <view wx:for-items="{{stories}}" wx:key="index">
+    <image class="example" src="{{item}}" mode="widthFix">
+    </image>
+  </view>
 </view>

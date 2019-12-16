@@ -9,13 +9,13 @@ Page({
     // hasUserInfo: false,
     // canIUse: wx.canIUse('button.open-type.getUserInfo')
     imgData: [
-      "http://139.224.72.205/images/loreal/top.png",
-      "http://139.224.72.205/images/loreal/top.png",
-      "http://139.224.72.205/images/loreal/top.png",
-      "http://139.224.72.205/images/loreal/top.png"
+      "http://139.224.72.205/images/loreal/banner.png",
+      "http://139.224.72.205/images/loreal/banner.png",
+      "http://139.224.72.205/images/loreal/banner.png",
+      "http://139.224.72.205/images/loreal/banner.png"
     ],
     width:750,
-    height: 976,
+    height: 588,
   },
   setContainerHeight: function (e) {
 

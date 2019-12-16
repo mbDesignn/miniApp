@@ -1,16 +1,40 @@
 <!--index.wxml-->
 <view class='container'>
+  <view style="width:100vw;height:90rpx;">
+    <mp-searchbar bindselectresult="selectResult" search="{{search}}"></mp-searchbar>
+  </view>
   <!-- <image class='imgTop' src='http://139.224.72.205/images/loreal/top.png'></image> -->
   <swiper autoplay="true" style="position:relative;width:{{width}}rpx;height:{{height}}rpx;">
     <block wx:for="{{imgData}}" wx:key="index">
       <swiper-item>
         <image class='imgTop' bindload='setContainerHeight' src='{{item}}'></image>
         <view class="swipe-num">
-          <text>{{index + 1}}</text><text>/</text><text>{{imgData.length}}</text>
+          <text>{{index + 1}}</text>
+          <text>/</text>
+          <text>{{imgData.length}}</text>
         </view>
       </swiper-item>
     </block>
   </swiper>
+  <view class="navgation">
+    <!-- <image src="http://139.224.72.205/images/loreal/navgation.jpg"></image> -->
+    <view>
+      <image src="http://139.224.72.205/images/loreal/index/fresh_man.jpg"></image>
+      <text>新人专享</text>
+    </view>
+    <view>
+      <image src="http://139.224.72.205/images/loreal/index/star_product.jpg"></image>
+      <text>明星产品</text>
+    </view>
+    <view>
+      <image src="http://139.224.72.205/images/loreal/index/all_product.jpg"></image>
+      <text>全部宝贝</text>
+    </view>
+    <view>
+      <image src="http://139.224.72.205/images/loreal/index/sign.jpg"></image>
+      <text>积分签到</text>
+    </view>
+  </view>
   <view class="column-f">
     <view class="column-f-bd colum-shadow">
       <image class="com-img" src="http://139.224.72.205/images/loreal/index/prd_1.jpg"></image>
@@ -134,5 +158,5 @@
     <image src="http://139.224.72.205/images/loreal/index/pic_6.jpg"></image>
   </view>
   <!-- <image class='imgMid' src='http://139.224.72.205/images/loreal/mid.png'></image> -->
-  <image class='imgBt' src='http://139.224.72.205/images/loreal/bt.png'></image>
+  <!-- <image class='imgBt' src='http://139.224.72.205/images/loreal/bt.png'></image> -->
 </view>
