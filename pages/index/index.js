@@ -4,10 +4,6 @@ const app = getApp()
 
 Page({
   data: {
-    // motto: 'Hello World',
-    // userInfo: {},
-    // hasUserInfo: false,
-    // canIUse: wx.canIUse('button.open-type.getUserInfo')
     imgData: [
       "http://139.224.72.205/images/loreal/banner.png",
       "http://139.224.72.205/images/loreal/banner.png",

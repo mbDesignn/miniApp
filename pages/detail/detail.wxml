@@ -1,6 +1,18 @@
 <view class='detail-content'>
   <view>
-    <image class='imgBanner' src='http://139.224.72.205/images/loreal/detai_banner.jpg'></image>
+    <!-- <image class='imgBanner' src='http://139.224.72.205/images/loreal/detai_banner.jpg'></image> -->
+    <swiper autoplay="true" style="position:relative;width:{{width}}rpx;height:{{height}}rpx;">
+    <block wx:for="{{imgData}}" wx:key="index">
+      <swiper-item>
+        <image class='imgBanner' bindload='setContainerHeight' src='{{item}}'></image>
+        <view class="swipe-num">
+          <text>{{index + 1}}</text>
+          <text>/</text>
+          <text>{{imgData.length}}</text>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
   </view>
   <view class='de-h'>
     <view class='de-h-info'>
@@ -12,7 +24,8 @@
       </view>
     </view>
     <view class='de-h-share'>
-      <mp-icon type="outline" icon="share" color="orange" size="{{24}}"></mp-icon>
+      <mp-icon type="outline" icon="share" color="#173c6b" size="{{24}}"></mp-icon>
+      <text>分享</text>
     </view>
   </view>
   <view class='de-list'>
@@ -73,7 +86,7 @@
       </view>
       <view>
         <mp-icon type="outline" icon="star" color="gray" size="{{24}}"></mp-icon>
-        <text>首页</text>
+        <text>购物车</text>
       </view>
     </view>
     <button bindtap="addToCart">加入购物车</button>

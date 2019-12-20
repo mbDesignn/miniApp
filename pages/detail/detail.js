@@ -6,7 +6,39 @@ Page({
    */
   data: {
     goodsId: '', //1:dbp 2:cica 3:xhs
-    urlList:[]
+    urlList:[],
+    imgData: [
+      "http://139.224.72.205/images/loreal/detai_banner.jpg",
+      "http://139.224.72.205/images/loreal/detai_banner.jpg",
+      "http://139.224.72.205/images/loreal/detai_banner.jpg",
+      "http://139.224.72.205/images/loreal/detai_banner.jpg"
+    ],
+    width: 750,
+    height: 810,
+  },
+
+  setContainerHeight: function (e) {
+
+    //图片的原始宽度
+    var imgWidth = e.detail.width;
+
+    //图片的原始高度
+    var imgHeight = e.detail.height;
+
+    //同步获取设备宽度
+    var sysInfo = wx.getSystemInfoSync();
+    console.log("sysInfo:", sysInfo);
+
+    //获取屏幕的宽度
+    var screenWidth = sysInfo.screenWidth;
+
+    //获取屏幕和原图的比例
+    var scale = screenWidth / imgWidth;
+
+    //设置容器的高度
+    this.setData({
+      height: imgHeight
+    })
   },
 
   /**
