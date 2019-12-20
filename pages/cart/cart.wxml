@@ -1,10 +1,11 @@
-
- <template name="cart-goods">
+<template name="cart-goods">
   <!-- 产品 -->
   <view class="cart-wrap">
     <view class="product">
       <view class="product-select">
-        <icon type="success" color="#333">di</icon>
+        <mp-checkbox-group prop="radio" multi="{{false}}" bindchange="radioChange">
+          <mp-checkbox wx:for="{{radioItems}}" wx:key="value" label="{{item.name}}" value="{{item.value}}" checked="{{item.checked}}"></mp-checkbox>
+        </mp-checkbox-group>
       </view>
       <view class="product-img">
         <image src="http://139.224.72.205/images/loreal/cart/mini_img.jpg"></image>
@@ -19,7 +20,7 @@
     <view class="active-wrap">
       <rich-text class="active-t">活动代码</rich-text>
       <view class="active-bar">
-        <input class="weui-input" auto-focus placeholder="请输入活动代码"/>
+        <input class="weui-input" auto-focus placeholder="请输入活动代码" />
         <button class="bt-submit">提交</button>
       </view>
     </view>
@@ -49,17 +50,17 @@
         <view class='de-list-c'>
           <image src='http://139.224.72.205/images/loreal/de_es_img.jpg'></image>
           <view>
-          <text class='de-list-text'>
+            <text class='de-list-text'>
             小绷带修护霜 50ml
           </text>
           </view>
           <view>
-          <text class='de-list-sm'>
+            <text class='de-list-sm'>
             对抗换季泛红
           </text>
           </view>
           <view>
-          <text class='de-list-price'>
+            <text class='de-list-price'>
             ￥285.00
           </text>
           </view>
@@ -68,7 +69,7 @@
     </view>
 
   </view>
-   <view class="pay-bar">
+  <view class="pay-bar">
     <view>
       <icon type="success"></icon>
       <text>全选</text>
@@ -83,5 +84,3 @@
     <button>前往支付</button>
   </view>
 </template>
-
-

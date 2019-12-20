@@ -82,12 +82,12 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 25);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 25:
+/***/ 3:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -95,6 +95,7 @@ module.exports =
 
 Component({
     options: {
+        multipleSlots: true,
         addGlobalClass: true
     },
     properties: {
@@ -102,104 +103,81 @@ Component({
             type: String,
             value: ''
         },
-        focus: {
-            type: Boolean,
-            value: false
-        },
-        placeholder: {
-            type: String,
-            value: '搜索'
-        },
-        value: {
+        title: {
             type: String,
             value: ''
         },
-        search: {
-            type: Function,
-            value: null
-        },
-        throttle: {
-            type: Number,
-            value: 500
-        },
-        cancelText: {
+        background: {
             type: String,
-            value: '取消'
+            value: ''
         },
-        cancel: {
+        color: {
+            type: String,
+            value: ''
+        },
+        back: {
             type: Boolean,
             value: true
+        },
+        loading: {
+            type: Boolean,
+            value: false
+        },
+        animated: {
+            type: Boolean,
+            value: true
+        },
+        show: {
+            type: Boolean,
+            value: true,
+            observer: '_showChange'
+        },
+        delta: {
+            type: Number,
+            value: 1
         }
     },
     data: {
-        result: []
+        displayStyle: ''
     },
-    lastSearch: Date.now(),
-    lifetimes: {
-        attached: function attached() {
-            if (this.data.focus) {
-                this.setData({
-                    searchState: true
+    attached: function attached() {
+        var _this = this;
+
+        var isSupport = !!wx.getMenuButtonBoundingClientRect;
+        var rect = wx.getMenuButtonBoundingClientRect ? wx.getMenuButtonBoundingClientRect() : null;
+        wx.getSystemInfo({
+            success: function success(res) {
+                var ios = !!(res.system.toLowerCase().search('ios') + 1);
+                _this.setData({
+                    ios: ios,
+                    statusBarHeight: res.statusBarHeight,
+                    innerWidth: isSupport ? 'width:' + rect.left + 'px' : '',
+                    innerPaddingRight: isSupport ? 'padding-right:' + (res.windowWidth - rect.left) + 'px' : '',
+                    leftWidth: isSupport ? 'width:' + (res.windowWidth - rect.left) + 'px' : ''
                 });
             }
-        }
+        });
     },
+
     methods: {
-        clearInput: function clearInput() {
-            this.setData({
-                value: ''
-            });
-            this.triggerEvent('clear');
-        },
-        inputFocus: function inputFocus(e) {
-            this.triggerEvent('focus', e.detail);
-        },
-        inputBlur: function inputBlur(e) {
-            this.setData({
-                focus: false
-            });
-            this.triggerEvent('blur', e.detail);
-        },
-        showInput: function showInput() {
-            this.setData({
-                focus: true,
-                searchState: true
-            });
-        },
-        hideInput: function hideInput() {
-            this.setData({
-                searchState: false
-            });
-        },
-        inputChange: function inputChange(e) {
-            var _this = this;
-
-            this.setData({
-                value: e.detail.value
-            });
-            this.triggerEvent('input', e.detail);
-            if (Date.now() - this.lastSearch < this.data.throttle) {
-                return;
+        _showChange: function _showChange(show) {
+            var animated = this.data.animated;
+            var displayStyle = '';
+            if (animated) {
+                displayStyle = 'opacity: ' + (show ? '1' : '0') + ';-webkit-transition:opacity 0.5s;transition:opacity 0.5s;';
+            } else {
+                displayStyle = 'display: ' + (show ? '' : 'none');
             }
-            if (typeof this.data.search !== 'function') {
-                return;
-            }
-            this.lastSearch = Date.now();
-            this.timerId = setTimeout(function () {
-                _this.data.search(e.detail.value).then(function (json) {
-                    _this.setData({
-                        result: json
-                    });
-                }).catch(function (err) {
-                    console.log('search error', err);
-                });
-            }, this.data.throttle);
+            this.setData({
+                displayStyle: displayStyle
+            });
         },
-        selectResult: function selectResult(e) {
-            var index = e.currentTarget.dataset.index;
-
-            var item = this.data.result[index];
-            this.triggerEvent('selectresult', { index: index, item: item });
+        back: function back() {
+            var data = this.data;
+            wx.navigateBack({
+                delta: data.delta
+            });
+            this.triggerEvent('back', { delta: data.delta }, {});
         }
     }
 });

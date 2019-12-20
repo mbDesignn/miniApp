@@ -82,12 +82,12 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 25);
+/******/ 	return __webpack_require__(__webpack_require__.s = 18);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 25:
+/***/ 18:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -95,111 +95,107 @@ module.exports =
 
 Component({
     options: {
-        addGlobalClass: true
+        addGlobalClass: true,
+        multipleSlots: true
     },
     properties: {
         extClass: {
             type: String,
             value: ''
         },
-        focus: {
+        buttons: {
+            type: Array,
+            value: [],
+            observer: function observer(newVal) {
+                this.addClassNameForButton();
+            }
+        },
+        disable: {
             type: Boolean,
             value: false
         },
-        placeholder: {
-            type: String,
-            value: '搜索'
+        icon: {
+            type: Boolean,
+            value: false
         },
-        value: {
-            type: String,
-            value: ''
+        show: {
+            type: Boolean,
+            value: false
         },
-        search: {
-            type: Function,
-            value: null
+        duration: {
+            type: Number,
+            value: 350
         },
         throttle: {
             type: Number,
-            value: 500
+            value: 40
         },
-        cancelText: {
-            type: String,
-            value: '取消'
-        },
-        cancel: {
-            type: Boolean,
-            value: true
+        rebounce: {
+            type: Number,
+            value: 0
         }
     },
     data: {
-        result: []
+        size: null
     },
-    lastSearch: Date.now(),
-    lifetimes: {
-        attached: function attached() {
-            if (this.data.focus) {
-                this.setData({
-                    searchState: true
-                });
-            }
-        }
+    ready: function ready() {
+        this.updateRight();
+        this.addClassNameForButton();
     },
+
     methods: {
-        clearInput: function clearInput() {
-            this.setData({
-                value: ''
-            });
-            this.triggerEvent('clear');
-        },
-        inputFocus: function inputFocus(e) {
-            this.triggerEvent('focus', e.detail);
-        },
-        inputBlur: function inputBlur(e) {
-            this.setData({
-                focus: false
-            });
-            this.triggerEvent('blur', e.detail);
-        },
-        showInput: function showInput() {
-            this.setData({
-                focus: true,
-                searchState: true
-            });
-        },
-        hideInput: function hideInput() {
-            this.setData({
-                searchState: false
-            });
-        },
-        inputChange: function inputChange(e) {
+        updateRight: function updateRight() {
             var _this = this;
 
-            this.setData({
-                value: e.detail.value
-            });
-            this.triggerEvent('input', e.detail);
-            if (Date.now() - this.lastSearch < this.data.throttle) {
-                return;
-            }
-            if (typeof this.data.search !== 'function') {
-                return;
-            }
-            this.lastSearch = Date.now();
-            this.timerId = setTimeout(function () {
-                _this.data.search(e.detail.value).then(function (json) {
+            var data = this.data;
+            var query = wx.createSelectorQuery().in(this);
+            query.select('.left').boundingClientRect(function (res) {
+                console.log('right res', res);
+                var btnQuery = wx.createSelectorQuery().in(_this);
+                btnQuery.selectAll('.btn').boundingClientRect(function (rects) {
+                    console.log('btn rects', rects);
                     _this.setData({
-                        result: json
+                        size: {
+                            buttons: rects,
+                            button: res,
+                            show: data.show,
+                            disable: data.disable,
+                            throttle: data.throttle,
+                            rebounce: data.rebounce
+                        }
                     });
-                }).catch(function (err) {
-                    console.log('search error', err);
-                });
-            }, this.data.throttle);
+                }).exec();
+            }).exec();
         },
-        selectResult: function selectResult(e) {
-            var index = e.currentTarget.dataset.index;
+        addClassNameForButton: function addClassNameForButton() {
+            var _data = this.data,
+                buttons = _data.buttons,
+                icon = _data.icon;
 
-            var item = this.data.result[index];
-            this.triggerEvent('selectresult', { index: index, item: item });
+            buttons.forEach(function (btn) {
+                if (icon) {
+                    btn.className = '';
+                } else if (btn.type === 'warn') {
+                    btn.className = 'weui-slideview__btn-group_warn';
+                } else {
+                    btn.className = 'weui-slideview__btn-group_default';
+                }
+            });
+            this.setData({
+                buttons: buttons
+            });
+        },
+        buttonTapByWxs: function buttonTapByWxs(data) {
+            this.triggerEvent('buttontap', data, {});
+        },
+        hide: function hide() {
+            this.triggerEvent('hide', {}, {});
+        },
+        show: function show() {
+            this.triggerEvent('show', {}, {});
+        },
+        transitionEnd: function transitionEnd() {
+            console.log('transitiion end');
         }
     }
 });

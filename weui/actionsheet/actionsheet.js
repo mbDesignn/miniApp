@@ -82,12 +82,12 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 25);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
-/******/ ({
-
-/***/ 25:
+/******/ ([
+/* 0 */,
+/* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -95,115 +95,76 @@ module.exports =
 
 Component({
     options: {
+        multipleSlots: true,
         addGlobalClass: true
     },
     properties: {
-        extClass: {
+        title: {
             type: String,
             value: ''
         },
-        focus: {
+        showCancel: {
             type: Boolean,
-            value: false
-        },
-        placeholder: {
-            type: String,
-            value: '搜索'
-        },
-        value: {
-            type: String,
-            value: ''
-        },
-        search: {
-            type: Function,
-            value: null
-        },
-        throttle: {
-            type: Number,
-            value: 500
+            value: true
         },
         cancelText: {
             type: String,
             value: '取消'
         },
-        cancel: {
+        maskClass: {
+            type: String,
+            value: ''
+        },
+        extClass: {
+            type: String,
+            value: ''
+        },
+        maskClosable: {
             type: Boolean,
             value: true
-        }
-    },
-    data: {
-        result: []
-    },
-    lastSearch: Date.now(),
-    lifetimes: {
-        attached: function attached() {
-            if (this.data.focus) {
-                this.setData({
-                    searchState: true
-                });
-            }
+        },
+        mask: {
+            type: Boolean,
+            value: true
+        },
+        show: {
+            type: Boolean,
+            value: false
+        },
+        actions: {
+            type: Array,
+            value: [],
+            observer: '_groupChange'
         }
     },
     methods: {
-        clearInput: function clearInput() {
-            this.setData({
-                value: ''
-            });
-            this.triggerEvent('clear');
-        },
-        inputFocus: function inputFocus(e) {
-            this.triggerEvent('focus', e.detail);
-        },
-        inputBlur: function inputBlur(e) {
-            this.setData({
-                focus: false
-            });
-            this.triggerEvent('blur', e.detail);
-        },
-        showInput: function showInput() {
-            this.setData({
-                focus: true,
-                searchState: true
-            });
-        },
-        hideInput: function hideInput() {
-            this.setData({
-                searchState: false
-            });
-        },
-        inputChange: function inputChange(e) {
-            var _this = this;
-
-            this.setData({
-                value: e.detail.value
-            });
-            this.triggerEvent('input', e.detail);
-            if (Date.now() - this.lastSearch < this.data.throttle) {
-                return;
-            }
-            if (typeof this.data.search !== 'function') {
-                return;
-            }
-            this.lastSearch = Date.now();
-            this.timerId = setTimeout(function () {
-                _this.data.search(e.detail.value).then(function (json) {
-                    _this.setData({
-                        result: json
-                    });
-                }).catch(function (err) {
-                    console.log('search error', err);
+        _groupChange: function _groupChange(e) {
+            if (e.length > 0 && typeof e[0] !== 'string' && !(e[0] instanceof Array)) {
+                this.setData({
+                    actions: [this.data.actions]
                 });
-            }, this.data.throttle);
+            }
         },
-        selectResult: function selectResult(e) {
-            var index = e.currentTarget.dataset.index;
+        buttonTap: function buttonTap(e) {
+            var _e$currentTarget$data = e.currentTarget.dataset,
+                value = _e$currentTarget$data.value,
+                groupindex = _e$currentTarget$data.groupindex,
+                index = _e$currentTarget$data.index;
 
-            var item = this.data.result[index];
-            this.triggerEvent('selectresult', { index: index, item: item });
+            this.triggerEvent('actiontap', { value: value, groupindex: groupindex, index: index });
+        },
+        closeActionSheet: function closeActionSheet(e) {
+            var type = e.currentTarget.dataset.type;
+
+            if (this.data.maskClosable || type) {
+                this.setData({
+                    show: false
+                });
+                this.triggerEvent('close');
+            }
         }
     }
 });
 
 /***/ })
-
-/******/ });
+/******/ ]);

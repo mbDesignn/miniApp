@@ -82,12 +82,12 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 25);
+/******/ 	return __webpack_require__(__webpack_require__.s = 14);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 25:
+/***/ 14:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -102,104 +102,76 @@ Component({
             type: String,
             value: ''
         },
-        focus: {
+        show: {
             type: Boolean,
-            value: false
+            value: true,
+            observer: function observer(newValue) {
+                this._computedStyle(newValue, this.data.animated);
+            }
         },
-        placeholder: {
-            type: String,
-            value: '搜索'
+        animated: {
+            type: Boolean,
+            value: false,
+            observer: function observer(newValue) {
+                this._computedStyle(this.data.show, newValue);
+            }
         },
-        value: {
-            type: String,
-            value: ''
-        },
-        search: {
-            type: Function,
-            value: null
-        },
-        throttle: {
+        duration: {
             type: Number,
-            value: 500
+            value: 350
         },
-        cancelText: {
+        type: {
             type: String,
-            value: '取消'
+            value: 'dot-gray'
         },
-        cancel: {
-            type: Boolean,
-            value: true
+        tips: {
+            type: String,
+            value: '加载中'
         }
     },
     data: {
-        result: []
-    },
-    lastSearch: Date.now(),
-    lifetimes: {
-        attached: function attached() {
-            if (this.data.focus) {
-                this.setData({
-                    searchState: true
-                });
-            }
-        }
+        animationData: {},
+        animationInstance: {},
+        displayStyle: 'none'
     },
     methods: {
-        clearInput: function clearInput() {
-            this.setData({
-                value: ''
-            });
-            this.triggerEvent('clear');
+        _computedStyle: function _computedStyle(show, animated) {
+            if (!show) {
+                if (!animated) {
+                    this.setData({
+                        displayStyle: 'none'
+                    });
+                } else {
+                    this._startAnimation();
+                }
+            } else {
+                this.setData({
+                    displayStyle: ''
+                });
+            }
         },
-        inputFocus: function inputFocus(e) {
-            this.triggerEvent('focus', e.detail);
-        },
-        inputBlur: function inputBlur(e) {
-            this.setData({
-                focus: false
-            });
-            this.triggerEvent('blur', e.detail);
-        },
-        showInput: function showInput() {
-            this.setData({
-                focus: true,
-                searchState: true
-            });
-        },
-        hideInput: function hideInput() {
-            this.setData({
-                searchState: false
-            });
-        },
-        inputChange: function inputChange(e) {
+        _startAnimation: function _startAnimation() {
             var _this = this;
 
-            this.setData({
-                value: e.detail.value
-            });
-            this.triggerEvent('input', e.detail);
-            if (Date.now() - this.lastSearch < this.data.throttle) {
-                return;
-            }
-            if (typeof this.data.search !== 'function') {
-                return;
-            }
-            this.lastSearch = Date.now();
-            this.timerId = setTimeout(function () {
-                _this.data.search(e.detail.value).then(function (json) {
-                    _this.setData({
-                        result: json
-                    });
-                }).catch(function (err) {
-                    console.log('search error', err);
+            setTimeout(function () {
+                var data = _this.data;
+                var animation = data.animationInstance;
+                animation.height(0).step();
+                _this.setData({
+                    animationData: animation.export()
                 });
-            }, this.data.throttle);
-        },
-        selectResult: function selectResult(e) {
-            var index = e.currentTarget.dataset.index;
-
-            var item = this.data.result[index];
-            this.triggerEvent('selectresult', { index: index, item: item });
+            }, 0);
+        }
+    },
+    lifetimes: {
+        attached: function attached() {
+            var data = this.data;
+            var animationInstance = wx.createAnimation({
+                duration: data.duration,
+                timingFunction: 'ease'
+            });
+            this.setData({ animationInstance: animationInstance });
+            this._computedStyle(this.data.show, this.data.animated);
         }
     }
 });

@@ -82,12 +82,12 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 25);
+/******/ 	return __webpack_require__(__webpack_require__.s = 24);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 25:
+/***/ 24:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -95,111 +95,74 @@ module.exports =
 
 Component({
     options: {
-        addGlobalClass: true
+        addGlobalClass: true,
+        multipleSlots: true
     },
     properties: {
-        extClass: {
-            type: String,
-            value: ''
+        multi: {
+            type: Boolean,
+            value: true
         },
-        focus: {
+        checked: {
             type: Boolean,
             value: false
-        },
-        placeholder: {
-            type: String,
-            value: '搜索'
         },
         value: {
             type: String,
             value: ''
         },
-        search: {
-            type: Function,
-            value: null
-        },
-        throttle: {
-            type: Number,
-            value: 500
-        },
-        cancelText: {
+        label: {
             type: String,
-            value: '取消'
+            value: 'label'
         },
-        cancel: {
-            type: Boolean,
-            value: true
+        extClass: {
+            type: String,
+            value: ''
         }
     },
-    data: {
-        result: []
-    },
-    lastSearch: Date.now(),
-    lifetimes: {
-        attached: function attached() {
-            if (this.data.focus) {
-                this.setData({
-                    searchState: true
-                });
+    data: {},
+    relations: {
+        '../checkbox-group/checkbox-group': {
+            type: 'ancestor',
+            linked: function linked(target) {
+                this.data.group = target;
+            },
+            unlinked: function unlinked() {
+                this.data.group = null;
             }
         }
     },
     methods: {
-        clearInput: function clearInput() {
+        setMulti: function setMulti(multi) {
             this.setData({
-                value: ''
-            });
-            this.triggerEvent('clear');
-        },
-        inputFocus: function inputFocus(e) {
-            this.triggerEvent('focus', e.detail);
-        },
-        inputBlur: function inputBlur(e) {
-            this.setData({
-                focus: false
-            });
-            this.triggerEvent('blur', e.detail);
-        },
-        showInput: function showInput() {
-            this.setData({
-                focus: true,
-                searchState: true
+                multi: multi
             });
         },
-        hideInput: function hideInput() {
+        setOuterClass: function setOuterClass(className) {
             this.setData({
-                searchState: false
+                outerClass: className
             });
         },
-        inputChange: function inputChange(e) {
-            var _this = this;
-
-            this.setData({
-                value: e.detail.value
-            });
-            this.triggerEvent('input', e.detail);
-            if (Date.now() - this.lastSearch < this.data.throttle) {
-                return;
-            }
-            if (typeof this.data.search !== 'function') {
-                return;
-            }
-            this.lastSearch = Date.now();
-            this.timerId = setTimeout(function () {
-                _this.data.search(e.detail.value).then(function (json) {
-                    _this.setData({
-                        result: json
-                    });
-                }).catch(function (err) {
-                    console.log('search error', err);
+        checkedChange: function checkedChange(e) {
+            if (this.data.multi) {
+                var checked = !this.data.checked;
+                this.setData({
+                    checked: checked
                 });
-            }, this.data.throttle);
-        },
-        selectResult: function selectResult(e) {
-            var index = e.currentTarget.dataset.index;
-
-            var item = this.data.result[index];
-            this.triggerEvent('selectresult', { index: index, item: item });
+                if (this.data.group) {
+                    this.data.group.checkedChange(checked, this);
+                }
+            } else {
+                var _checked = this.data.checked;
+                if (_checked) return;
+                this.setData({
+                    checked: true
+                });
+                if (this.data.group) {
+                    this.data.group.checkedChange(_checked, this);
+                }
+            }
+            this.triggerEvent('change', { value: this.data.value, checked: this.data.checked });
         }
     }
 });

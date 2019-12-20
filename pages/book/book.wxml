@@ -1,7 +1,7 @@
 <!-- 确定订单 -->
 <view class="book-wrap">
   <view class="add-address">
-   <icon type="success" >di</icon>
+   <mp-icon type="outline" icon="location" color="black" size="{{25}}"></mp-icon>
    <text>选择收货地址 ，</text>
    <text bindtap="addAddress">添加地址</text>
    <text>></text>

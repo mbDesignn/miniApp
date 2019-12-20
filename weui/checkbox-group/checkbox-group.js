@@ -82,124 +82,118 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 25);
+/******/ 	return __webpack_require__(__webpack_require__.s = 23);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 25:
+/***/ 23:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 Component({
-    options: {
-        addGlobalClass: true
-    },
     properties: {
+        multi: {
+            type: Boolean,
+            value: true,
+            observer: '_multiChange'
+        },
         extClass: {
             type: String,
             value: ''
         },
-        focus: {
-            type: Boolean,
-            value: false
-        },
-        placeholder: {
-            type: String,
-            value: '搜索'
-        },
-        value: {
+        prop: {
             type: String,
             value: ''
-        },
-        search: {
-            type: Function,
-            value: null
-        },
-        throttle: {
-            type: Number,
-            value: 500
-        },
-        cancelText: {
-            type: String,
-            value: '取消'
-        },
-        cancel: {
-            type: Boolean,
-            value: true
         }
     },
     data: {
-        result: []
+        targetList: [],
+        parentCell: null
     },
-    lastSearch: Date.now(),
-    lifetimes: {
-        attached: function attached() {
-            if (this.data.focus) {
-                this.setData({
-                    searchState: true
+    relations: {
+        '../checkbox/checkbox': {
+            type: 'descendant',
+            linked: function linked(target) {
+                this.data.targetList.push(target);
+                target.setMulti(this.data.multi);
+                if (!this.data.firstItem) {
+                    this.data.firstItem = target;
+                }
+                if (target !== this.data.firstItem) {
+                    target.setOuterClass('weui-cell_wxss');
+                }
+            },
+            unlinked: function unlinked(target) {
+                var index = -1;
+                this.data.targetList.forEach(function (item, idx) {
+                    if (item === target) {
+                        index = idx;
+                    }
                 });
+                this.data.targetList.splice(index, 1);
+                if (!this.data.targetList) {
+                    this.data.firstItem = null;
+                }
+            }
+        },
+        '../form/form': {
+            type: 'ancestor'
+        },
+        '../cells/cells': {
+            type: 'ancestor',
+            linked: function linked(target) {
+                if (!this.data.parentCell) {
+                    this.data.parentCell = target;
+                }
+                this.setParentCellsClass();
+            },
+            unlinked: function unlinked(target) {
+                this.data.parentCell = null;
             }
         }
     },
     methods: {
-        clearInput: function clearInput() {
-            this.setData({
-                value: ''
-            });
-            this.triggerEvent('clear');
-        },
-        inputFocus: function inputFocus(e) {
-            this.triggerEvent('focus', e.detail);
-        },
-        inputBlur: function inputBlur(e) {
-            this.setData({
-                focus: false
-            });
-            this.triggerEvent('blur', e.detail);
-        },
-        showInput: function showInput() {
-            this.setData({
-                focus: true,
-                searchState: true
-            });
-        },
-        hideInput: function hideInput() {
-            this.setData({
-                searchState: false
-            });
-        },
-        inputChange: function inputChange(e) {
-            var _this = this;
-
-            this.setData({
-                value: e.detail.value
-            });
-            this.triggerEvent('input', e.detail);
-            if (Date.now() - this.lastSearch < this.data.throttle) {
-                return;
-            }
-            if (typeof this.data.search !== 'function') {
-                return;
-            }
-            this.lastSearch = Date.now();
-            this.timerId = setTimeout(function () {
-                _this.data.search(e.detail.value).then(function (json) {
-                    _this.setData({
-                        result: json
-                    });
-                }).catch(function (err) {
-                    console.log('search error', err);
+        checkedChange: function checkedChange(checked, target) {
+            console.log('checked change', checked);
+            if (this.data.multi) {
+                var vals = [];
+                this.data.targetList.forEach(function (item) {
+                    if (item.data.checked) {
+                        vals.push(item.data.value);
+                    }
                 });
-            }, this.data.throttle);
+                this.triggerEvent('change', { value: vals });
+            } else {
+                var val = '';
+                this.data.targetList.forEach(function (item) {
+                    if (item === target) {
+                        val = item.data.value;
+                    } else {
+                        item.setData({
+                            checked: false
+                        });
+                    }
+                });
+                this.triggerEvent('change', { value: val }, {});
+            }
         },
-        selectResult: function selectResult(e) {
-            var index = e.currentTarget.dataset.index;
-
-            var item = this.data.result[index];
-            this.triggerEvent('selectresult', { index: index, item: item });
+        setParentCellsClass: function setParentCellsClass() {
+            var className = this.data.multi ? 'weui-cells_checkbox' : '';
+            if (this.data.parentCell) {
+                this.data.parentCell.setCellsClass(className);
+            }
+        },
+        _multiChange: function _multiChange(multi) {
+            this.data.targetList.forEach(function (target) {
+                target.setMulti(multi);
+            });
+            if (this.data.parentCell) {
+                this.data.parentCell.setCellMulti(multi);
+            }
+            return multi;
         }
     }
 });

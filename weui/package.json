@@ -1,7 +1,7 @@
 {
-  "author" : "xushengni,tomylin,cunjinli,rockhou",
-  "description" : "",
-  "license" : "MIT",
-  "name" : "weui-miniprogram",
-  "version" : "0.2.0"
+    "name": "weui-miniprogram",
+    "version": "0.2.0",
+    "description": "",
+    "author": "xushengni,tomylin,cunjinli,rockhou",
+    "license": "MIT"
 }

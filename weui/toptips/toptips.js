@@ -82,12 +82,12 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 25);
+/******/ 	return __webpack_require__(__webpack_require__.s = 13);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 25:
+/***/ 13:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -98,108 +98,69 @@ Component({
         addGlobalClass: true
     },
     properties: {
+        type: {
+            type: String,
+            value: 'error',
+            observer: '_typeChange'
+        },
+        show: {
+            type: Boolean,
+            value: false,
+            observer: '_showChange'
+        },
+        msg: {
+            type: String,
+            value: ''
+        },
+        delay: {
+            type: Number,
+            value: 2000
+        },
         extClass: {
             type: String,
             value: ''
-        },
-        focus: {
-            type: Boolean,
-            value: false
-        },
-        placeholder: {
-            type: String,
-            value: '搜索'
-        },
-        value: {
-            type: String,
-            value: ''
-        },
-        search: {
-            type: Function,
-            value: null
-        },
-        throttle: {
-            type: Number,
-            value: 500
-        },
-        cancelText: {
-            type: String,
-            value: '取消'
-        },
-        cancel: {
-            type: Boolean,
-            value: true
         }
     },
     data: {
-        result: []
-    },
-    lastSearch: Date.now(),
-    lifetimes: {
-        attached: function attached() {
-            if (this.data.focus) {
-                this.setData({
-                    searchState: true
-                });
-            }
+        typeClassMap: {
+            'warn': 'weui-toptips_warn',
+            'info': 'weui-toptips_info',
+            'success': 'weui-toptips_success',
+            'error': 'weui-toptips_error'
         }
     },
+    attached: function attached() {
+        var data = this.data;
+        this.setData({
+            className: data.typeClassMap[data.type] || ''
+        });
+    },
+
     methods: {
-        clearInput: function clearInput() {
+        _typeChange: function _typeChange(newVal) {
             this.setData({
-                value: ''
+                className: this.data.typeClassMap[newVal] || ''
             });
-            this.triggerEvent('clear');
+            return newVal;
         },
-        inputFocus: function inputFocus(e) {
-            this.triggerEvent('focus', e.detail);
+        _showChange: function _showChange(newVal) {
+            this._showToptips(newVal);
         },
-        inputBlur: function inputBlur(e) {
-            this.setData({
-                focus: false
-            });
-            this.triggerEvent('blur', e.detail);
-        },
-        showInput: function showInput() {
-            this.setData({
-                focus: true,
-                searchState: true
-            });
-        },
-        hideInput: function hideInput() {
-            this.setData({
-                searchState: false
-            });
-        },
-        inputChange: function inputChange(e) {
+        _showToptips: function _showToptips(newVal) {
             var _this = this;
 
-            this.setData({
-                value: e.detail.value
-            });
-            this.triggerEvent('input', e.detail);
-            if (Date.now() - this.lastSearch < this.data.throttle) {
-                return;
-            }
-            if (typeof this.data.search !== 'function') {
-                return;
-            }
-            this.lastSearch = Date.now();
-            this.timerId = setTimeout(function () {
-                _this.data.search(e.detail.value).then(function (json) {
+            if (newVal && this.data.delay) {
+                setTimeout(function () {
                     _this.setData({
-                        result: json
+                        show: false
+                    }, function () {
+                        _this.triggerEvent('hide', {}, {});
                     });
-                }).catch(function (err) {
-                    console.log('search error', err);
-                });
-            }, this.data.throttle);
-        },
-        selectResult: function selectResult(e) {
-            var index = e.currentTarget.dataset.index;
-
-            var item = this.data.result[index];
-            this.triggerEvent('selectresult', { index: index, item: item });
+                }, this.data.delay);
+            }
+            this.setData({
+                show: newVal
+            });
         }
     }
 });

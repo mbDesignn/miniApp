@@ -82,12 +82,12 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 25);
+/******/ 	return __webpack_require__(__webpack_require__.s = 21);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 25:
+/***/ 21:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -98,108 +98,71 @@ Component({
         addGlobalClass: true
     },
     properties: {
-        extClass: {
-            type: String,
-            value: ''
+        imgUrls: {
+            type: Array,
+            value: [],
+            observer: function observer(newVal, oldVal, changedPath) {
+                this.setData({ currentImgs: newVal });
+            }
         },
-        focus: {
-            type: Boolean,
-            value: false
-        },
-        placeholder: {
-            type: String,
-            value: '搜索'
-        },
-        value: {
-            type: String,
-            value: ''
-        },
-        search: {
-            type: Function,
-            value: null
-        },
-        throttle: {
-            type: Number,
-            value: 500
-        },
-        cancelText: {
-            type: String,
-            value: '取消'
-        },
-        cancel: {
+        showDelete: {
             type: Boolean,
             value: true
+        },
+        show: {
+            type: Boolean,
+            value: true
+        },
+        current: {
+            type: Number,
+            value: 0
+        },
+        hideOnClick: {
+            type: Boolean,
+            value: true
+        },
+        extClass: {
+            type: Boolean,
+            value: ''
         }
     },
     data: {
-        result: []
+        currentImgs: []
     },
-    lastSearch: Date.now(),
-    lifetimes: {
-        attached: function attached() {
-            if (this.data.focus) {
-                this.setData({
-                    searchState: true
-                });
-            }
-        }
+    ready: function ready() {
+        var data = this.data;
+        this.setData({ currentImgs: data.imgUrls });
     },
+
     methods: {
-        clearInput: function clearInput() {
+        change: function change(e) {
             this.setData({
-                value: ''
+                current: e.detail.current
             });
-            this.triggerEvent('clear');
+            this.triggerEvent('change', { current: e.detail.current }, {});
         },
-        inputFocus: function inputFocus(e) {
-            this.triggerEvent('focus', e.detail);
-        },
-        inputBlur: function inputBlur(e) {
-            this.setData({
-                focus: false
-            });
-            this.triggerEvent('blur', e.detail);
-        },
-        showInput: function showInput() {
-            this.setData({
-                focus: true,
-                searchState: true
-            });
-        },
-        hideInput: function hideInput() {
-            this.setData({
-                searchState: false
-            });
-        },
-        inputChange: function inputChange(e) {
-            var _this = this;
-
-            this.setData({
-                value: e.detail.value
-            });
-            this.triggerEvent('input', e.detail);
-            if (Date.now() - this.lastSearch < this.data.throttle) {
+        deleteImg: function deleteImg() {
+            var data = this.data;
+            var imgs = data.currentImgs;
+            var url = imgs.splice(data.current, 1);
+            this.triggerEvent('delete', { url: url[0], index: data.current }, {});
+            if (imgs.length === 0) {
+                this.hideGallery();
                 return;
             }
-            if (typeof this.data.search !== 'function') {
-                return;
-            }
-            this.lastSearch = Date.now();
-            this.timerId = setTimeout(function () {
-                _this.data.search(e.detail.value).then(function (json) {
-                    _this.setData({
-                        result: json
-                    });
-                }).catch(function (err) {
-                    console.log('search error', err);
+            this.setData({
+                current: 0,
+                currentImgs: imgs
+            });
+        },
+        hideGallery: function hideGallery() {
+            var data = this.data;
+            if (data.hideOnClick) {
+                this.setData({
+                    show: false
                 });
-            }, this.data.throttle);
-        },
-        selectResult: function selectResult(e) {
-            var index = e.currentTarget.dataset.index;
-
-            var item = this.data.result[index];
-            this.triggerEvent('selectresult', { index: index, item: item });
+                this.triggerEvent('hide', {}, {});
+            }
         }
     }
 });
