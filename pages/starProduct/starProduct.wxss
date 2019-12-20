@@ -1,0 +1,11 @@
+.star-product{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.brand-story view{
+  margin-top:-13rpx;
+}
+.example{
+  width: 100%;
+}

@@ -18,21 +18,21 @@
   </swiper>
   <view class="navgation">
     <!-- <image src="http://139.224.72.205/images/loreal/navgation.jpg"></image> -->
-    <view>
+    <view bindtap="iconTap" data-type="1">
       <image src="http://139.224.72.205/images/loreal/index/fresh_man.jpg"></image>
-      <text>新人专享</text>
+      <text>领券优惠</text>
     </view>
-    <view>
+    <view bindtap="iconTap" data-type="2">
       <image src="http://139.224.72.205/images/loreal/index/star_product.jpg"></image>
       <text>明星产品</text>
     </view>
-    <view>
+    <view bindtap="iconTap" data-type="3">
       <image src="http://139.224.72.205/images/loreal/index/all_product.jpg"></image>
       <text>全部宝贝</text>
     </view>
-    <view>
+    <view bindtap="iconTap" data-type="4">
       <image src="http://139.224.72.205/images/loreal/index/sign.jpg"></image>
-      <text>积分签到</text>
+      <text>品牌故事</text>
     </view>
   </view>
   <view class="column-f">

@@ -83,5 +83,31 @@ Page({
     wx.navigateTo({
       url: '/pages/detail/detail?goodsId=' + e.target.dataset.goodsid,
     })
+  },
+  iconTap(e){
+    switch (e.currentTarget.dataset.type) {
+      case "1":
+        wx.navigateTo({
+          url: '/pages/getCoupons/getCoupons',
+        })
+        break;
+      case "2":
+        wx.navigateTo({
+          url: '/pages/starProduct/starProduct',
+        })
+        break;
+      case "3":
+        wx.switchTab({
+          url: '/pages/goods/goods'
+        })
+        break;
+      case "4":
+        wx.navigateTo({
+          url: '/pages/brandStory/brandStory',
+        })
+        break;
+      default:
+        break;
+    }
   }
 })

@@ -43,7 +43,7 @@
   font-family: SourceHanSansCN-Bold;
   font-size: 30rpx;
   color: #1d1d1d;
-  border-bottom: 4rpx solid #b41b16;
+  border-bottom: 4rpx solid #173c6b;
 }
 
 .coupons-list{

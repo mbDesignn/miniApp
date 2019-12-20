@@ -46,13 +46,21 @@ Page({
     })
   },
   tapDialogButton() {
-    this.setData({
-      showOneButtonDialog: false
+    const self = this;
+    wx.setClipboardData({
+      //准备复制的数据
+      data: '微信号123456789',
+      success: function (res) {
+        self.setData({
+          showOneButtonDialog: false
+        })
+        wx.showToast({
+          title: '复制成功，去添加好友吧',
+          icon: 'none'
+        })
+      }
     })
-    wx.showToast({
-      title: '复制成功，去添加好友吧',
-      icon: 'none'
-    })
+    
   },
   gotoOrderlist(){
     wx.navigateTo({

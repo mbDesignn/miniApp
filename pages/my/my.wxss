@@ -153,6 +153,9 @@
   color:  #898989;
 }
 
+.mp-dialog .weui-dialog{
+  width: 90%;
+}
 
 /* .container{
   min-height: 100%;

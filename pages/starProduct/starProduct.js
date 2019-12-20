@@ -1,11 +1,11 @@
-// pages/brandStory/brandStory.js
+// pages/starProduct/starProduct.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    stories: ['http://139.224.72.205/images/loreal/brandStory/story_1.jpg', 'http://139.224.72.205/images/loreal/brandStory/story_2.jpg', 'http://139.224.72.205/images/loreal/brandStory/story_3.jpg', 'http://139.224.72.205/images/loreal/brandStory/story_4.jpg', 'http://139.224.72.205/images/loreal/brandStory/story_5.jpg', 'http://139.224.72.205/images/loreal/brandStory/story_6.jpg', 'http://139.224.72.205/images/loreal/brandStory/story_7.jpg', 'http://139.224.72.205/images/loreal/brandStory/story_8.jpg', 'http://139.224.72.205/images/loreal/brandStory/story_9.jpg', 'http://139.224.72.205/images/loreal/brandStory/story_10.jpg', 'http://139.224.72.205/images/loreal/brandStory/story_11.jpg', 'http://139.224.72.205/images/loreal/brandStory/story_12.jpg']
+    stars: ['http://139.224.72.205/images/loreal/brandStory/story_13.jpg', 'http://139.224.72.205/images/loreal/brandStory/story_14.jpg', 'http://139.224.72.205/images/loreal/brandStory/story_15.jpg']
   },
 
   /**

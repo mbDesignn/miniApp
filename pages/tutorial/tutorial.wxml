@@ -1,8 +1,9 @@
 <view class="tutorial-container">
   <view class="tutorial">
     <view wx:for-items="{{steps}}" wx:key="index" class="tutorial-item">
-      <view class="step-name" data-text="{{item.name}}" bindtap="copyText">
+      <view class="step-name" >
         {{item.name}}
+        <text wx:if="{{!index}}" data-text="勃朗圣泉" bindtap="copyText"><text class="keyword">勃朗圣泉</text>(复制)</text>
       </view>
       <image class="example" src="{{item.url}}" mode="widthFix">
       </image>

@@ -75,8 +75,8 @@
       </view>
     </view>
    </view>
-   <mp-dialog title="" show="{{showOneButtonDialog}}" bindbuttontap="tapDialogButton" buttons="{{oneButton}}">
-        <view>点击“复制微信 号”，微信添加好友即可联 系小波浪，领取专属福利， 仅限新人，请勿重复添加。</view>
+   <mp-dialog ext-class="mp-dialog" title="" show="{{showOneButtonDialog}}" bindbuttontap="tapDialogButton" buttons="{{oneButton}}">
+        <view>点击“复制微信号”，微信添加好友即可联系小波浪，领取专属福利， 仅限新人，请勿重复添加。</view>
     </mp-dialog>
 </view>
 

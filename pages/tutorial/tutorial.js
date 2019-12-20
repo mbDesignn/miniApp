@@ -6,7 +6,7 @@ Page({
   data: {
     steps: [
       {
-      name:'第一步：微信搜索 勃朗圣泉',
+      name:'第一步：微信搜索 ',
         url:'http://139.224.72.205/images/loreal/tutorial/step1.png'
       },
       {
@@ -21,6 +21,7 @@ Page({
   },
   copyText: function (event) {
     const text = event.target.dataset.text
+    console.log(event)
     if (text.includes('勃朗圣泉')) {
       wx.setClipboardData({
         //准备复制的数据
