@@ -54,7 +54,7 @@
 				{
 					"id": 1,
 					"name": "购物车",
-					"pathName": "pages/cartGroup/cartGroup",
+					"pathName": "pages/cart/cart",
 					"query": "",
 					"scene": null
 				},

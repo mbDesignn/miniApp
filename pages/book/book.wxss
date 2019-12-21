@@ -1,177 +1,268 @@
-.book-wrap{
+.book-wrap {
   background: #f3f3f3;
   min-height: calc(100vh - 106rpx);
 }
-.add-address{
-  padding-left:32rpx;
-	height: 143rpx;
-	background-color: #ffffff;
+.add-address {
+  padding-left: 32rpx;
+  height: 143rpx;
+  background-color: #fff;
   display: flex;
   align-items: center;
+  border-bottom: 5rpx solid #173c6b;
 }
-.add-address > text{
+
+.add-address > text {
+  font-size: 30rpx;
   margin-left: 15rpx;
 }
-.add-address > text:nth-of-type(2){
-  color: #dc1640;
+
+.add-address > text:nth-of-type(2) {
+  color: #173c6b;
 }
 
 .product {
-  margin:20rpx;
+  margin: 20rpx 0;
   display: flex;
   justify-content: start;
   align-items: center;
-	height: 267rpx;
-	background-color: #ffffff;
-	border-radius: 10rpx;
+  height: 267rpx;
+  background-color: #fff;
+  border-radius: 10rpx;
 }
-.product-select{
-  width:142rpx;
+
+.product-select {
+  width: 142rpx;
   text-align: center;
 }
-.product-img{
-  width:164rpx;
+
+.product-img {
+  width: 164rpx;
 }
-.product-img image{
-  width:164rpx;
+
+.product-img image {
+  width: 164rpx;
   height: 177rpx;
 }
-.product-info{
+
+.product-info {
   position: relative;
   padding-right: 60rpx;
-  padding-left:27rpx;
-  /* display: flex; */
-  /* align-items: flex-start; */
-  width:560rpx;
+  padding-left: 27rpx;
+  /* display: flex; *//* align-items: flex-start; */
+  width: 560rpx;
 }
-.product-info text{
+
+.product-info text {
   display: block;
 }
+
+.product-info .pro-num {
+  position: absolute;
+  top: 1rpx;
+  right: 34rpx;
+  font-size: 24rpx;
+  color: #898989;
+}
+
 .product-title {
-	font-family: SourceHanSansCN-Regular;
-	font-size: 30rpx;
-	font-weight: normal;
-	font-stretch: normal;
-	line-height: 36rpx;
-	letter-spacing: 0rpx;
-	color: #323232;
+  font-family: SourceHanSansCN-Regular;
+  font-size: 30rpx;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 36rpx;
+  letter-spacing: 0rpx;
+  color: #323232;
 }
+
 .product-title-m {
-	font-family: SourceHanSansCN-Regular;
-	font-size: 18rpx;
-	font-weight: normal;
-	font-stretch: normal;
-	line-height: 36rpx;
-	letter-spacing: 0rpx;
-	color: #9e9e9e;
+  font-family: SourceHanSansCN-Regular;
+  font-size: 18rpx;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 36rpx;
+  letter-spacing: 0rpx;
+  color: #9e9e9e;
 }
+
 .product-price {
-  padding-top:42rpx;
-	font-family: SourceHanSansCN-Medium;
-	font-size: 36rpx;
-	font-weight: normal;
-	font-stretch: normal;
-	line-height: 36rpx;
-	letter-spacing: 0rpx;
-	color: #dc1640;
-}
-.count-wrap > view{
-  padding: 0 32rpx;
-  display: flex;
-  justify-content: space-between;
-  align-items:center;
-  min-height: 100rpx;
-  background: #fff;
-  border-bottom:1px solid #e3e3e3;
-}
-.count-wrap > view:last-of-type{
-  border-bottom:0rpx;
-}
-.right-txt{
+  padding-top: 42rpx;
+  font-family: SourceHanSansCN-Medium;
+  font-size: 36rpx;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 36rpx;
+  letter-spacing: 0rpx;
   color: #dc1640;
 }
 
-.active-wrap{
-  padding-top:45rpx;
-  padding-bottom:45rpx;
-}
-.active-bar{
-  padding-top:26rpx;
+.count-wrap > view {
+  padding: 0 32rpx;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100rpx;
+  background: #fff;
+  border-bottom: 1px solid #e3e3e3;
 }
-.active-t{
-	width: 118rpx;
-	height: 28rpx;
-	font-family: SourceHanSansCN-Regular;
-	font-size: 30rpx;
-	font-weight: normal;
-	font-stretch: normal;
-	line-height: 36rpx;
-	letter-spacing: 0rpx;
-	color: #1d1d1d;
+
+.count-wrap > view:last-of-type {
+  border-bottom: 0rpx;
 }
-.active-bar input{
-  margin-right:20rpx;
-  padding-left:20rpx;
-  width: 490rpx;
-	height: 72rpx;
-	background-color: #ffffff;
-	border-radius: 8rpx;
-	border: solid 2rpx #cccccc;
-}
-.active-bar button{
-  width: 154rpx;
-	height: 72rpx;
-  line-height:72rpx;
-	background-color: #000000;
-	border-radius: 8rpx;
-  color:#fff;
-}
-.pay-bar{
-  display: flex;
-  width:100vw;
-  height:106rpx;
-}
-.pay-bar > view:nth-of-type(1){
-  width: 242rpx;
-} 
-.pay-bar > view:nth-of-type(2){
-  width: 298rpx;
-}
-.pay-bar > button{
-  width:250rpx;
-  height:106rpx;
-  line-height:106rpx;
-  background-color: #173c6b;
-  border-radius: 0;
-  color:#fff;
-}
-.pay-bar > button::after{
- border:0;
-}
-.pay-bar > view > view {
-  padding-top:20rpx;
-}
-.pay-bar > view > view text:nth-of-type(2){
+
+.right-txt {
   color: #dc1640;
 }
+
+.right-txt-a {
+  color: #939393;
+}
+
+.active-wrap {
+  padding-top: 45rpx;
+  padding-bottom: 45rpx;
+}
+
+.active-bar {
+  padding-top: 26rpx;
+  display: flex;
+}
+
+.active-t {
+  width: 118rpx;
+  height: 28rpx;
+  font-family: SourceHanSansCN-Regular;
+  font-size: 30rpx;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 36rpx;
+  letter-spacing: 0rpx;
+  color: #1d1d1d;
+}
+
+.active-bar input {
+  margin-right: 20rpx;
+  padding-left: 20rpx;
+  width: 490rpx;
+  height: 72rpx;
+  background-color: #fff;
+  border-radius: 8rpx;
+  border: solid 2rpx #ccc;
+}
+
+.active-bar button {
+  width: 154rpx;
+  height: 72rpx;
+  line-height: 72rpx;
+  background-color: #000;
+  border-radius: 8rpx;
+  color: #fff;
+}
+
+.pay-bar {
+  display: flex;
+  width: 100vw;
+  height: 106rpx;
+}
+
+.pay-bar > view:nth-of-type(1) {
+  width: 242rpx;
+}
+
+.pay-bar > view:nth-of-type(2) {
+  width: 298rpx;
+}
+
+.pay-bar > button {
+  width: 250rpx;
+  height: 106rpx;
+  line-height: 106rpx;
+  background-color: #173c6b;
+  border-radius: 0;
+  color: #fff;
+}
+
+.pay-bar > button::after {
+  border: 0;
+}
+
+.pay-bar > view > view {
+  padding-top: 20rpx;
+}
+
+.pay-bar > view > view text:nth-of-type(2) {
+  color: #dc1640;
+}
+
 .pay-bar > view:nth-of-type(1) {
   display: flex;
   align-items: center;
-  justify-content:center;
+  justify-content: center;
 }
-.pay-bar > view:nth-of-type(1) text{
-  padding-left:10rpx;
+
+.pay-bar > view:nth-of-type(1) text {
+  padding-left: 10rpx;
 }
-.pay-bar > view:nth-of-type(2){
+
+.pay-bar > view:nth-of-type(2) {
   display: flex;
   flex-direction: column;
 }
+
 .pay-bar > view:nth-of-type(2) > text {
-  height:20rpx;
+  height: 20rpx;
   font-size: 20rpx;
-	font-weight: normal;
-	font-stretch: normal;
-	letter-spacing: 1rpx;
-	color: #8d8d8d;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 1rpx;
+  color: #8d8d8d;
+}
+
+/*主容器*/
+
+.stepper {
+  position: absolute;
+  right: 34rpx;
+  bottom: -6rpx;
+  width: 174rpx;
+  height: 45rpx;
+  /*给主容器设一个边框*/
+  border: 1rpx solid #ccc;
+  border-radius: 3rpx;
+  margin: 0 auto;
+}
+
+/*加号和减号*/
+
+.stepper text {
+  width: 52rpx;
+  height:45rpx;
+  line-height: 45rpx;
+  text-align: center;
+  float: left;
+}
+
+/*数值*/
+
+.stepper input {
+  width: 70rpx;
+  height: 26rpx;
+  float: left;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 12px;
+  /*给中间的input设置左右边框即可*/
+  border-left: 1rpx solid #ccc;
+  border-right: 1rpx solid #ccc;
+}
+
+/*普通样式*/
+
+.stepper .normal {
+  color: black;
+}
+
+/*禁用样式*/
+
+.stepper .disabled {
+  color: #ccc;
 }

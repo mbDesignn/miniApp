@@ -1,10 +1,10 @@
 <!--pages/address/address.wxml-->
-<view class="address-w">
+<view class="address-wrap">
   <view class="address-bd">
     <view>
       <text>收件人</text>
       <input placeholder-class="phcolor" auto-focus placeholder="姓名/昵称"/>
-      <icon></icon>
+      <mp-icon type="outline" icon="note" color="black" size="{{20}}"></mp-icon>
     </view>
     <view>
       <text>手机号码</text>
@@ -13,11 +13,12 @@
     <view>
       <text>选择地区</text>
       <input placeholder-class="phcolor" auto-focus placeholder="选择您的地区"/>
-      <icon></icon>
+      <mp-icon type="outline" icon="location" color="black" size="{{20}}"></mp-icon>
     </view>
     <view>
       <text>详细地址</text>
-      <input placeholder-class="phcolor" auto-focus placeholder="填写您的详细收件地址"/>
+      <!-- <input placeholder-class="phcolor" auto-focus placeholder="填写您的详细收件地址"/> -->
+      <textarea placeholder="填写您的详细收件地址" placeholder-class="phcolor"  name="textarea" auto-height />
     </view>
     <view class="">
       <button class="address-btn">确认添加</button>

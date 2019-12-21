@@ -1,8 +1,6 @@
 {
   "navigationBarTitleText": "购物车",
   "usingComponents": {
-    "mp-checkbox-group": "../../weui/checkbox-group/checkbox-group",
-    "mp-checkbox": "../../weui/checkbox/checkbox",
-    "mp-cells": "../../weui/cells/cells"
+    "mp-icon": "../../weui/icon/icon"
   }
 }
