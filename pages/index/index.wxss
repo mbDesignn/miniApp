@@ -18,16 +18,14 @@
   position: relative;
   z-index: 10;
   width: 750rpx;
-  height: 1084rpx;
-  /* background: url(https://gitee.com/wnan1981/miniprogram/blob/master/static/images/index/pic_1.jpg) no-repeat;
-  background-size:750rpx 1084rpx; */
+  height: 604rpx;
 }
 
 .column-f > image {
   position: absolute;
   z-index: 1;
   width: 750rpx;
-  height: 1084rpx;
+  height: 604rpx;
 }
 
 .column-f-bd {
@@ -40,27 +38,32 @@
   margin: 127rpx auto;
   padding-top: 15rpx;
   width: 707rpx;
-  height: 934rpx;
+  height: 454rpx;
   background: #fff;
 }
 
 .column-f-bd > image {
-  height: 625rpx;
+  position:absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin:14rpx auto;
+  height: 442rpx;
 }
 
 .column-s {
   position: relative;
   width: 750rpx;
-  height: 970rpx;
-  /* background: url(https://gitee.com/wnan1981/miniprogram/blob/master/static/images/index/pic_2.jpg) no-repeat;
-  background-size:750rpx 970rpx; */
+  height: 503rpx;
 }
 
 .column-s > image {
   position: absolute;
   z-index: 1;
   width: 750rpx;
-  height: 970rpx;
+  height: 503rpx;
 }
 
 .column-s-bd {
@@ -73,28 +76,33 @@
   margin: 16rpx auto;
   padding-top: 15rpx;
   width: 707rpx;
-  height: 930rpx;
+  height: 454rpx;
   background: #fff;
 }
 
 .column-s-bd > image {
-  height: 622rpx;
+  position:absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin:14rpx auto;
+  height: 442rpx;
 }
 
 .column-t {
   position: relative;
   z-index: 10;
   width: 750rpx;
-  height: 964rpx;
-  /* background: url(https://gitee.com/wnan1981/miniprogram/blob/master/static/images/index/pic_3.jpg) no-repeat;
-  background-size:750rpx 970rpx; */
+  height: 500rpx;
 }
 
 .column-t > image {
   position: absolute;
   z-index: 1;
   width: 750rpx;
-  height: 964rpx;
+  height: 500rpx;
 }
 
 .column-t-bd {
@@ -107,28 +115,33 @@
   margin: 16rpx auto;
   padding-top: 15rpx;
   width: 707rpx;
-  height: 930rpx;
+  height: 454rpx;
   background: #fff;
 }
 
 .column-t-bd > image {
-  height: 620rpx;
+  position:absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin:14rpx auto;
+  height: 442rpx;
 }
 
 .column-fo {
   position: relative;
   z-index: 10;
   width: 750rpx;
-  height: 955rpx;
-  /* background: url(https://gitee.com/wnan1981/miniprogram/blob/master/static/images/index/pic_4.jpg) no-repeat;
-  background-size:750rpx 955rpx; */
+  height: 517rpx;
 }
 
 .column-fo > image {
   position: absolute;
   z-index: 1;
   width: 750rpx;
-  height: 955rpx;
+  height: 517rpx;
 }
 
 .column-fo-bd {
@@ -141,27 +154,32 @@
   margin: 16rpx auto;
   padding-top: 15rpx;
   width: 707rpx;
-  height: 955rpx;
+  height: 454rpx;
   background: #fff;
 }
 
 .column-fo-bd > image {
-  height: 609rpx;
+  position:absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin:14rpx auto;
+  height: 442rpx;
 }
 
 .column-fi {
   position: relative;
   width: 750rpx;
-  height: 790rpx;
-  /* background: url(https://gitee.com/wnan1981/miniprogram/blob/master/static/images/index/pic_5.jpg) no-repeat;
-  background-size:750rpx 790rpx; */
+  height: 800rpx;
 }
 
 .column-fi > image {
   position: absolute;
   z-index: 1;
   width: 750rpx;
-  height: 790rpx;
+  height: 800rpx;
 }
 
 .column-fi-bd {
@@ -176,13 +194,17 @@
   height: 320rpx;
   background: rgba(255, 255, 255, 0.85);
   display: flex;
-  /* justify-content: space-between; */
+  justify-content: center;
 }
 
 .column-fi-bd .prd-info, .column-si-bd .prd-info {
-  padding-top: 56rpx;
-  flex: 1;
+  /* padding-top: 56rpx; */
+  top:53rpx;
+  display: flex;
   justify-content: flex-start;
+}
+.column-fi-bd .prd-info:nth-of-type(2), .column-si-bd .prd-info:nth-of-type(2) {
+  margin-left:40rpx;
 }
 
 .column-fi-bd .prd-info .prd-text, .column-si-bd .prd-info .prd-text {
@@ -192,16 +214,14 @@
 .column-si {
   position: relative;
   width: 750rpx;
-  height: 794rpx;
-  /* background: url(https://gitee.com/wnan1981/miniprogram/blob/master/static/images/index/pic_6.jpg) no-repeat;
-  background-size:750rpx 794rpx; */
+  height: 788rpx;
 }
 
 .column-si > image {
   position: absolute;
   z-index: 1;
   width: 750rpx;
-  height: 794rpx;
+  height: 788rpx;
 }
 
 .column-si-bd {
@@ -216,6 +236,7 @@
   height: 320rpx;
   background: rgba(255, 255, 255, 0.85);
   display: flex;
+  justify-content: center;
 }
 
 .com-img {
@@ -225,20 +246,28 @@
 }
 
 .prd-info {
+  margin-top:53rpx;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   text-align: center;
+  align-items: cneter;
 }
-
-.prd-info > text:nth-of-type(1) {
-  font-size: 46rpx;
+..proinfo-ps text{
+  word-break:keep-all;
+  white-space: nowrap;
+}
+.prd-info > text:nth-of-type(1),.prd-info > rich-text:nth-of-type(1) {
+  font-size: 40rpx;
   color: #003b6f;
   font-weight: normal;
 }
+.prd-info > rich-text:nth-of-type(1) {
+  margin-top:-20rpx;
+}
 
 .prd-info > text:nth-of-type(2) {
-  font-size: 24rpx;
+  font-size: 19rpx;
   color: #33a9c1;
 }
 
@@ -283,7 +312,7 @@
 }
 
 .prd-pt {
-  padding-top: 24rpx;
+  padding-top: 0rpx;
 }
 
 .swiper image {
@@ -340,4 +369,13 @@
   margin-bottom: 16rpx;
   width:105rpx;
   height:105rpx;
+}
+
+.proinfo-ps{
+  position: absolute;
+  z-index: 2;
+  right:93rpx;
+  padding-top:30rpx;
+  display: flex;
+  justify-items:end;
 }

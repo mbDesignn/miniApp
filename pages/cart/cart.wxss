@@ -68,7 +68,7 @@
 	line-height: 36rpx;
 	letter-spacing: 0rpx;
 	color: #dc1640;
-  text-align: right;
+  /* text-align: right; */
 }
 
 .active-wrap{
@@ -220,4 +220,54 @@
 	font-stretch: normal;
 	letter-spacing: 1rpx;
 	color: #8d8d8d;
+}
+
+/*主容器*/
+
+.stepper {
+  position: absolute;
+  right: 34rpx;
+  bottom: -6rpx;
+  width: 174rpx;
+  height: 45rpx;
+  /*给主容器设一个边框*/
+  border: 1rpx solid #ccc;
+  border-radius: 3rpx;
+  margin: 0 auto;
+}
+
+/*加号和减号*/
+
+.stepper text {
+  width: 52rpx;
+  height:45rpx;
+  line-height: 45rpx;
+  text-align: center;
+  float: left;
+}
+
+/*数值*/
+
+.stepper input {
+  width: 70rpx;
+  height: 26rpx;
+  float: left;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 12px;
+  /*给中间的input设置左右边框即可*/
+  border-left: 1rpx solid #ccc;
+  border-right: 1rpx solid #ccc;
+}
+
+/*普通样式*/
+
+.stepper .normal {
+  color: black;
+}
+
+/*禁用样式*/
+
+.stepper .disabled {
+  color: #ccc;
 }

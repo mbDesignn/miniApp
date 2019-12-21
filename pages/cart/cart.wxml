@@ -17,6 +17,14 @@
         <text class="product-title">勃朗圣泉专研修护舒缓喷雾250ml</text>
         <text class="product-title-m">常规50</text>
         <text class="product-price">￥ 165.00</text>
+        <view class="stepper">
+        <!-- 减号 -->
+        <text class="{{minusStatus}}" bindtap="bindMinus">-</text>
+        <!-- 数值 -->
+        <input type="number" bindchange="bindManual" value="{{num}}" />
+        <!-- 加号 -->
+        <text class="normal" bindtap="bindPlus">+</text>
+      </view>
       </view>
     </view>
     <!-- 活动代码 -->

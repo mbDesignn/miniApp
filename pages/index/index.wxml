@@ -38,8 +38,10 @@
   <view class="column-f">
     <view class="column-f-bd colum-shadow">
       <image class="com-img" src="http://139.224.72.205/images/loreal/index/prd_1.jpg"></image>
+      <view class="proinfo-ps">
       <view class="prd-info prd-pt">
-        <text>纵享“水微针”般细腻感</text>
+        <text>纵享“水微针”</text>
+        <rich-text>般细腻感</rich-text>
         <text>专研修护舒缓喷雾</text>
         <view>
           <text>￥</text>
@@ -49,14 +51,17 @@
         <button bindtap="gotoDetai" data-goodsid="1">立即订购 ></button>
         <!-- <text>舒新水为产品昵称，产品注册名为勃朗圣泉保湿修护精华水</text> -->
       </view>
+      </view>
     </view>
     <image src="http://139.224.72.205/images/loreal/index/pic_1.jpg"></image>
   </view>
   <view class="column-s">
     <view class="column-s-bd colum-shadow">
       <image class="com-img" src="http://139.224.72.205/images/loreal/index/prd_2.jpg"></image>
+      <view class="proinfo-ps">
       <view class="prd-info prd-pt">
-        <text>纵享“水微针”般细腻感</text>
+        <text>一支修护</text>
+        <rich-text>多种日常肌肤受损</rich-text>
         <text>专研修护舒缓喷雾</text>
         <view>
           <text>￥</text>
@@ -66,14 +71,17 @@
         <button bindtap="gotoDetai" data-goodsid="2">立即订购 ></button>
         <!-- <text>舒新水为产品昵称，产品注册名为勃朗圣泉保湿修护精华水</text> -->
       </view>
+      </view>
     </view>
     <image src="http://139.224.72.205/images/loreal/index/pic_2.jpg"></image>
   </view>
   <view class="column-t">
     <view class="column-t-bd colum-shadow">
       <image class="com-img" src="http://139.224.72.205/images/loreal/index/prd_3.jpg"></image>
+      <view class="proinfo-ps">
       <view class="prd-info prd-pt">
-        <text>纵享“水微针”般细腻感</text>
+        <text>一支修护</text>
+        <rich-text>多种日常肌肤受损</rich-text>
         <text>专研修护舒缓喷雾</text>
         <view>
           <text>￥</text>
@@ -83,14 +91,17 @@
         <button bindtap="gotoDetai" data-goodsid="3">立即订购 ></button>
         <!-- <text>舒新水为产品昵称，产品注册名为勃朗圣泉保湿修护精华水</text> -->
       </view>
+      </view>
     </view>
     <image src="http://139.224.72.205/images/loreal/index/pic_3.jpg"></image>
   </view>
   <view class="column-fo">
     <view class="column-fo-bd colum-shadow">
       <image class="com-img" src="http://139.224.72.205/images/loreal/index/prd_4.jpg"></image>
+      <view class="proinfo-ps">
       <view class="prd-info prd-pt">
-        <text>纵享“水微针”般细腻感</text>
+        <text>一支修护</text>
+        <rich-text>多种日常肌肤受损</rich-text>
         <text>专研修护舒缓喷雾</text>
         <view>
           <text>￥</text>
@@ -100,6 +111,8 @@
         <button bindtap="gotoDetai" data-goodsid="4">立即订购 ></button>
         <text>舒新水为产品昵称，产品注册名为勃朗圣泉保湿修护精华水</text>
       </view>
+      </view>
+      
     </view>
     <image src="http://139.224.72.205/images/loreal/index/pic_4.jpg"></image>
   </view>
