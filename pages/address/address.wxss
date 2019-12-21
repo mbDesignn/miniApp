@@ -18,6 +18,10 @@
   width:146rpx;
 }
 
+.address-bd > view > input{
+  width: 70vw;
+}
+
 .address-bd > view:last-of-type{
   border-bottom:0rpx;
   text-align: right;

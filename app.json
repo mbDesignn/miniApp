@@ -11,7 +11,8 @@
     "pages/address/address",
     "pages/myBook/mybook",
     "pages/coupons/coupons",
-    "pages/brandStory/brandStory"
+    "pages/brandStory/brandStory",
+    "pages/cart/cart"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -37,7 +38,7 @@
         "text": "商品"
       },
       {
-        "pagePath": "pages/cartGroup/cartGroup",
+        "pagePath": "pages/cart/cart",
         "iconPath": "static/images/nav/cart-off.png",
         "selectedIconPath": "static/images/nav/cart-on.png",
         "text": "购物车"

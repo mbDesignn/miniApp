@@ -1,15 +1,20 @@
 <!-- 确定订单 -->
 <view class="book-wrap">
   <view class="add-address">
-   <mp-icon type="outline" icon="location" color="black" size="{{25}}"></mp-icon>
-   <text>选择收货地址 ，</text>
-   <text bindtap="addAddress">添加地址</text>
-   <text>></text>
+    <mp-icon type="outline" icon="location" color="black" size="{{20}}"></mp-icon>
+    <text>选择收货地址 ，</text>
+    <text bindtap="addAddress">添加地址</text>
+    <mp-icon style="margin-left:270rpx;" type="outline" icon="arrow" color="gray" size="{{14}}"></mp-icon>
   </view>
   <!-- product -->
   <view class="product">
     <view class="product-select">
-       <icon type="success" color="#333">di</icon>
+      <!-- <icon type="success" color="#333">di</icon> -->
+      <radio-group class="radio-group" bindchange="radioChange">
+        <radio color='#173c6b' bindtap="bindtapRadio" wx:for-items="{{items}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}">
+          <text>{{item.value}}</text>
+        </radio>
+      </radio-group>
     </view>
     <view class="product-img">
       <image src="http://139.224.72.205/images/loreal/cart/mini_img.jpg"></image>
@@ -18,6 +23,15 @@
       <text class="product-title">勃朗圣泉专研修护舒缓喷雾250ml</text>
       <text class="product-title-m">婴儿及敏感肌适用</text>
       <text class="product-price">￥ 165.00</text>
+      <view class="pro-num">x1</view>
+      <view class="stepper">
+        <!-- 减号 -->
+        <text class="{{minusStatus}}" bindtap="bindMinus">-</text>
+        <!-- 数值 -->
+        <input type="number" bindchange="bindManual" value="{{num}}" />
+        <!-- 加号 -->
+        <text class="normal" bindtap="bindPlus">+</text>
+      </view>
     </view>
   </view>
   <!-- 统计 -->
@@ -25,14 +39,16 @@
     <view>
       <text>优惠券</text>
       <view bindtap="checkCoupons">
-        <text class="right-txt">暂无可用优惠券</text>
+        <text class="right-txt-a">暂无可用优惠券</text>
+        <mp-icon style="position:relative;top:-4rpx;margin:0rpx 0 0 10rpx;" type="outline" icon="arrow" color="#939393" size="{{14}}"></mp-icon>
+
       </view>
     </view>
     <view>
       <view class="active-wrap">
         <rich-text class="active-t">活动代码</rich-text>
         <view class="active-bar">
-          <input class="weui-input" auto-focus placeholder="请输入活动代码"/>
+          <input class="weui-input" auto-focus placeholder="请输入活动代码" />
           <button class="bt-submit">提交</button>
         </view>
       </view>
@@ -48,16 +64,16 @@
   </view>
 </view>
 <view class="pay-bar">
-    <view>
-      <!-- <icon type="success"></icon>
+  <view>
+    <!-- <icon type="success"></icon>
       <text>全选</text> -->
-    </view>
-    <view>
-      <view>
-        <text>合计：</text>
-        <text>￥179.00</text>
-      </view>
-      <text>（运费：￥0）</text>
-    </view>
-    <button>微信支付</button>
   </view>
+  <view>
+    <view>
+      <text>合计：</text>
+      <text>￥179.00</text>
+    </view>
+    <text>（运费：￥0）</text>
+  </view>
+  <button>微信支付</button>
+</view>

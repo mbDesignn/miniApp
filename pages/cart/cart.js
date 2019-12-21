@@ -5,47 +5,34 @@ Page({
    * 页面的初始数据
    */
   data: {
-    list:[1],
-    radioItems: [
-      { name: 'cell standard', value: '0', checked: true },
-      { name: 'cell standard', value: '1' }
-    ],
-    checkboxItems: [
-      { name: 'standard is dealt for u.', value: '0', checked: true },
-      { name: 'standard is dealicient for u.', value: '1' }
-    ],
+    goods: [{
+      name: 'USA',
+      value: ''
+    }],
+    realVal: '',
   },
   radioChange: function (e) {
-    console.log('radio发生change事件，携带value值为：', e.detail.value);
-
-    var radioItems = this.data.radioItems;
-    for (var i = 0, len = radioItems.length; i < len; ++i) {
-      radioItems[i].checked = radioItems[i].value == e.detail.value;
-    }
-
-    this.setData({
-      radioItems: radioItems,
-      [`formData.radio`]: e.detail.value
-    });
+    this.data.realVal = e.detail.value;
+    console.log(this.data.realVal);
   },
-  checkboxChange: function (e) {
-    console.log('checkbox发生change事件，携带value值为：', e.detail.value);
-
-    var checkboxItems = this.data.checkboxItems, values = e.detail.value;
-    for (var i = 0, lenI = checkboxItems.length; i < lenI; ++i) {
-      checkboxItems[i].checked = false;
-
-      for (var j = 0, lenJ = values.length; j < lenJ; ++j) {
-        if (checkboxItems[i].value == values[j]) {
-          checkboxItems[i].checked = true;
-          break;
+  bindtapRadio: function (e) {
+    var items = this.data.goods;
+    for (var i = 0; i < items.length; i++) {
+      if (items[i].name == this.data.realVal) {
+        for (var j = 0; j < items.length; j++) {
+          // console.log("items[j].checked = ", items[j].checked);
+          if (items[j].checked && j != i) {
+            items[j].checked = false;
+          }
         }
+        items[i].checked = !(items[i].checked);
+        console.log("-----:", items);
+        // this.setData(this.data.items[i]);
+
       }
     }
-
     this.setData({
-      checkboxItems: checkboxItems,
-      [`formData.checkbox`]: e.detail.value
+      goods: items
     });
   },
 
