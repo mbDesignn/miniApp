@@ -1,1 +1,78 @@
-/* pages/getCoupons/getCoupons.wxss */
+.get-coupons{
+  min-height: 100vh;
+  color: #fff;
+}
+.get-coupons .container-bg{
+  background-image: url(http://139.224.72.205/images/loreal/getcoupons/page_bg.jpg);
+  background-repeat:no-repeat;
+  background-size:100% 100%; 
+  width: 100%;
+  min-height: 100vh;
+}
+.container-bg .head{
+  width: 100%;
+  text-align: center;
+  padding-top: 60rpx;
+  font-size: 60rpx;
+}
+
+.coupons-bg{
+  width: 100%;
+  height: 493rpx;
+  background-image: url(http://139.224.72.205/images/loreal/getcoupons/coupons_bg.png);
+  background-repeat:no-repeat;
+  background-size:100% 100%; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.coupon{
+  margin-left: 15rpx;
+  margin-right: 15rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 241rpx;
+  height: 328rpx;
+  background-image: url(http://139.224.72.205/images/loreal/getcoupons/coupon_bg.png);
+  background-repeat:no-repeat;
+  background-size:100% 100%; 
+}
+.coupon .title{
+  margin-top: 41rpx;
+  font-size: 30rpx;
+  line-height: 36rpx;
+  width: 241rpx;
+  text-align: center;
+}
+.coupon .value{
+  margin-top: 38rpx;
+  width: 241rpx;
+  text-align: center;
+  font-size: 100rpx;
+  line-height: 42rpx;
+}
+.value .icon{
+  width: 25rpx;
+	height: 24rpx;
+  border-radius: 10rpx;
+  font-size: 20rpx;
+	background-color: #173c6b;
+}
+.condition{
+  margin-top: 11rpx;
+  width: 241rpx;
+  text-align: center;
+  font-size: 24rpx;
+}
+.btn{
+  margin-top: 24rpx;
+  width: 194rpx;
+	height: 34rpx;
+	background-color: #fdfefe;
+  font-size: 21rpx;
+  color: #173c6b;
+  text-align: center;
+}

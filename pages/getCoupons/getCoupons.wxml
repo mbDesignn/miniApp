@@ -1,1 +1,16 @@
-<view>领取优惠券-待设计稿</view>
+<view class="get-coupons">
+  <view class="container-bg">
+    <view class="head">泉粉专享「2」重礼</view>
+    <view class="coupons-bg">
+      <view wx:for-items="{{coupons}}" wx:key="index" class="coupon">
+        <view class="title">{{item.title}}</view>
+        <view class="value">
+          <text class="icon">￥</text>
+          <text>{{item.value}}</text>
+        </view>
+        <view class="condition">{{item.condition}}</view>
+        <view class="btn" data-value="{{item.value}}" bindtap="getCoupons">立即领取 ></view>
+      </view>
+    </view>
+  </view>
+</view>

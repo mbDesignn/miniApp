@@ -16,7 +16,7 @@
 .get-container .get-btn{
   width: 131rpx;
 	height: 63rpx;
-	background-color: #000;
+	background-color: #173c6b;
   font-size: 30rpx;
 	color: #fff;
   text-align: center;

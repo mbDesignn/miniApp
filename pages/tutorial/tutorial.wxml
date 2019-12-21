@@ -5,7 +5,7 @@
         {{item.name}}
         <text wx:if="{{!index}}" data-text="勃朗圣泉" bindtap="copyText"><text class="keyword">勃朗圣泉</text>(复制)</text>
       </view>
-      <image class="example" src="{{item.url}}" mode="widthFix">
+      <image class="{{index ? 'example' : ''}}" src="{{item.url}}" mode="widthFix">
       </image>
     </view>
   </view>

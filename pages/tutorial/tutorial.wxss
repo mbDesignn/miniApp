@@ -19,6 +19,9 @@
   display: inline-block;
   margin-bottom: 11rpx;
 }
+.tutorial-item .example{
+  border-radius: 20rpx;
+}
 .step-name .keyword{
   text-decoration:underline;
 }
