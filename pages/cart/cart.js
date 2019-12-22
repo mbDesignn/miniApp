@@ -10,6 +10,22 @@ Page({
       value: ''
     }],
     realVal: '',
+    num: 1,
+  },
+  bindMinus() {
+    if (this.data.num >= 2) {
+      this.setData({
+        num: this.data.num - 1
+      })
+    }else {
+      console.log('即将删除产品！')
+    }
+
+  },
+  bindPlus() {
+    this.setData({
+      num: this.data.num + 1
+    })
   },
   radioChange: function (e) {
     this.data.realVal = e.detail.value;
