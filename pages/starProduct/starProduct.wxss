@@ -1,11 +1,88 @@
 .star-product{
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
-.brand-story view{
+.star-product > view:nth-of-type(2){
   margin-top:-13rpx;
 }
-.example{
-  width: 100%;
+.star-t{
+  position: absolute;
+  top:50rpx;
+  width:750rpx;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.star-t > text:nth-of-type(1){
+  font-size: 50rpx;
+  color: #003b6f;
+}
+.star-t > text:nth-of-type(2){
+  font-size:28rpx;
+  color: #737373;
+}
+.star-t > text:nth-of-type(2)::after,.star-t > text:nth-of-type(2)::before{
+  position: absolute;
+  top:99rpx;
+  content: '';
+  width:116rpx;
+  height:2rpx;
+  background: #b6b8ba;
+}
+.star-t > text:nth-of-type(2)::before{
+  left: 144rpx;
+}
+.star-t > text:nth-of-type(2)::after{
+  right: 144rpx;
+}
+
+.star-pic{
+  display: flex;
+
+}
+.db{
+  height:892rpx;
+  background:url(http://139.224.72.205/images/loreal/brandStory/story_13.jpg) no-repeat;
+  background-size: 750rpx 892rpx;
+}
+.cc{
+  height:670rpx;
+  background:url(http://139.224.72.205/images/loreal/brandStory/story_14.jpg) no-repeat;
+  background-size: 750rpx 670rpx;
+  justify-content: flex-end;
+}
+.xh{
+  height:669rpx;
+  background:url(http://139.224.72.205/images/loreal/brandStory/story_15.jpg) no-repeat;
+  background-size: 750rpx 669rpx;
+}
+
+.d{
+  margin-top:219rpx;width:335rpx;height:645rpx;
+}
+.c{
+  margin-top:74rpx;
+  width:750rpx;
+  height:675rpx;
+}
+.x{
+  margin-top:60rpx;
+  margin-left:40rpx;
+  width:331rpx;
+  height:569rpx;
+}
+.dbp{
+  padding-top: 308rpx;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.dbp > text{
+  font-size: 40rpx;
+  color:#003b6f;
+  /* line-height: 56rpx; */
 }

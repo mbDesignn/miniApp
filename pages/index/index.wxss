@@ -374,7 +374,8 @@
 .proinfo-ps{
   position: absolute;
   z-index: 2;
-  right:93rpx;
+  left:50%;
+  transform: translateX(10%);
   padding-top:30rpx;
   display: flex;
   justify-items:end;

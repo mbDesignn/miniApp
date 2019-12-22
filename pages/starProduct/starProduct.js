@@ -8,6 +8,13 @@ Page({
     stars: ['http://139.224.72.205/images/loreal/brandStory/story_13.jpg', 'http://139.224.72.205/images/loreal/brandStory/story_14.jpg', 'http://139.224.72.205/images/loreal/brandStory/story_15.jpg']
   },
 
+  goToDetail() {
+    console.log('hahah')
+    wx.navigateTo({
+      url: "/pages/detail/detail"
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */

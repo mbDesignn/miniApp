@@ -1,7 +1,46 @@
 <view class="star-product">
   <!-- <image class="story" wx:for="{{list}}" wx:key="index" src="{{item.url}}" mode="widthFix"></image> -->
-  <view wx:for-items="{{stars}}" wx:key="index">
+  <!-- <view wx:for-items="{{stars}}" wx:key="index">
     <image class="example" src="{{item}}" mode="widthFix">
     </image>
+  </view> -->
+  <view class="star-t">
+    <text >勃朗圣泉修护星品</text>
+    <text>唤醒肌肤修护力</text>
+  </view>
+  <view class="star-pic db" bindtap="goToDetail">
+    <view>
+      <image class="d" src="http://139.224.72.205/images/loreal/star/d.png"></image>
+    </view>
+    <view class="dbp">
+      <text>一喷舒缓</text>
+      <text>肌肤随享水疗SPA</text>
+      <image style="margin:73rpx 0 65rpx;width:282rpx;height:124rpx;" src="http://139.224.72.205/images/loreal/star/d_t.png"></image>
+      <image style="width:312rpx;height:61rpx;" src="http://139.224.72.205/images/loreal/star/buy.png"></image>
+    </view>
+  </view>
+  <view class="star-pic cc" bindtap="goToDetail">
+    <view class="dbp" style="position:absolute;padding-top:103rpx;left:72rpx;">
+      <text>一支修护</text>
+      <text>多种日常肌肤受损</text>
+      <image style="margin:73rpx 0 65rpx;width:192rpx;height:124rpx;" src="http://139.224.72.205/images/loreal/star/c_t.png"></image>
+      <image style="width:312rpx;height:61rpx;" src="http://139.224.72.205/images/loreal/star/buy.png"></image>
+    </view>
+    <view>
+      <image class="c" src="http://139.224.72.205/images/loreal/star/c.png"></image>
+    </view>
+  </view>
+  <view class="star-pic xh" bindtap="goToDetail">
+    <view>
+      <image class="x" src="http://139.224.72.205/images/loreal/star/x.png"></image>
+    </view>
+    <view class="dbp" style="padding-top:128rpx;">
+      <text bindtap="goToDetail">修护肌肤屏障</text>
+      <text>对抗换季泛红肌</text>
+      <image style="margin:73rpx 0 65rpx;width:143rpx;height:122rpx;" src="http://139.224.72.205/images/loreal/star/x_t.png"></image>
+      <view >
+        <image style="width:312rpx;height:61rpx;" src="http://139.224.72.205/images/loreal/star/buy.png"></image>
+      </view>
+    </view>
   </view>
 </view>

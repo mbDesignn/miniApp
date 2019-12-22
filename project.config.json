@@ -111,6 +111,20 @@
 					"id": -1,
 					"name": "产品分类",
 					"pathName": "pages/goods/goods",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "领券优惠",
+					"pathName": "pages/getCoupons/getCoupons",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "明星产品",
+					"pathName": "pages/starProduct/starProduct",
 					"scene": null
 				}
 			]
