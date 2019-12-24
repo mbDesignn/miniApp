@@ -228,8 +228,8 @@
   position: absolute;
   right: 34rpx;
   bottom: -6rpx;
-  width: 174rpx;
-  height: 45rpx;
+  /* width: 174rpx; */
+  /* height: 45rpx; */
   /*给主容器设一个边框*/
   border: 1rpx solid #ccc;
   border-radius: 3rpx;

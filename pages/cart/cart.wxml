@@ -2,7 +2,6 @@
   <view wx:if="{{list.length > 0}}">
     <view class="cart-wrap">
       <view class="product">
-        <mp-icon style="position:absolute;top:54rpx;right:44rpx;" type="outline" icon="delete" color="gray" size="{{16}}" bindtap="deleteGoods"></mp-icon>
         <view class="product-select">
           <radio-group class="radio-group" bindchange="radioChange">
             <radio color='#173c6b' bindtap="bindtapRadio" wx:for-items="{{goods}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}">
@@ -14,6 +13,7 @@
           <image src="http://139.224.72.205/images/loreal/cart/mini_img.jpg"></image>
         </view>
         <view class="product-info">
+        <mp-icon style="position:absolute;top:-4px;right:40rpx;" type="outline" icon="delete" color="gray" size="{{16}}" bindtap="deleteGoods"></mp-icon>
           <text class="product-title">勃朗圣泉专研修护舒缓喷雾250ml</text>
           <text class="product-title-m">常规50</text>
           <text class="product-price">￥ 165.00</text>

@@ -14,7 +14,6 @@ Page({
     num: 1,
   },
   deleteGoods(){
-    console.log('+++')
     this.setData({
       list:[]
     })
@@ -67,7 +66,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    
   },
 
   /**
@@ -81,7 +80,9 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.setData({
+      list: [1,2]
+    })
   },
 
   /**
