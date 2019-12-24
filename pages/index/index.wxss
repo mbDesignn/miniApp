@@ -204,7 +204,7 @@
   justify-content: flex-start;
 }
 .column-fi-bd .prd-info:nth-of-type(2), .column-si-bd .prd-info:nth-of-type(2) {
-  margin-left:40rpx;
+  width: 354rpx;
 }
 
 .column-fi-bd .prd-info .prd-text, .column-si-bd .prd-info .prd-text {
@@ -312,6 +312,7 @@
 }
 
 .prd-pt {
+  width:354rpx;
   padding-top: 0rpx;
 }
 
@@ -378,8 +379,9 @@
   position: absolute;
   z-index: 2;
   left:50%;
-  transform: translateX(10%);
+  /* transform: translateX(10%); */
   padding-top:30rpx;
   display: flex;
   justify-items:end;
+  transform: translateX(-6%);
 }
