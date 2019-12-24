@@ -84,7 +84,7 @@
         <mp-icon type="outline" icon="comment" color="gray" size="{{24}}"></mp-icon>
         <text>客服</text>
       </view>
-      <view>
+      <view bindtap="addToCart">
         <mp-icon type="outline" icon="star" color="gray" size="{{24}}"></mp-icon>
         <text>购物车</text>
       </view>

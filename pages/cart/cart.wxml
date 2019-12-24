@@ -1,100 +1,107 @@
-<!-- <template name="cart-goods"> -->
   <!-- 产品 -->
-  <view class="cart-wrap">
-    <view class="product">
-      <mp-icon style="position:absolute;top:54rpx;right:44rpx;" type="outline" icon="delete" color="gray" size="{{16}}"></mp-icon>
-      <view class="product-select">
-        <radio-group class="radio-group" bindchange="radioChange">
-          <radio color='#173c6b' bindtap="bindtapRadio" wx:for-items="{{goods}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}">
-            <text>{{item.value}}</text>
-          </radio>
-        </radio-group>
+  <view wx:if="{{list.length > 0}}">
+    <view class="cart-wrap">
+      <view class="product">
+        <mp-icon style="position:absolute;top:54rpx;right:44rpx;" type="outline" icon="delete" color="gray" size="{{16}}" bindtap="deleteGoods"></mp-icon>
+        <view class="product-select">
+          <radio-group class="radio-group" bindchange="radioChange">
+            <radio color='#173c6b' bindtap="bindtapRadio" wx:for-items="{{goods}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}">
+              <text>{{item.value}}</text>
+            </radio>
+          </radio-group>
+        </view>
+        <view class="product-img">
+          <image src="http://139.224.72.205/images/loreal/cart/mini_img.jpg"></image>
+        </view>
+        <view class="product-info">
+          <text class="product-title">勃朗圣泉专研修护舒缓喷雾250ml</text>
+          <text class="product-title-m">常规50</text>
+          <text class="product-price">￥ 165.00</text>
+          <view class="stepper">
+          <!-- 减号 -->
+          <text class="{{minusStatus}}" bindtap="bindMinus">-</text>
+          <!-- 数值 -->
+          <input type="number" bindchange="bindManual" value="{{num}}" />
+          <!-- 加号 -->
+          <text class="normal" bindtap="bindPlus">+</text>
+        </view>
+        </view>
       </view>
-      <view class="product-img">
-        <image src="http://139.224.72.205/images/loreal/cart/mini_img.jpg"></image>
+      <!-- 活动代码 -->
+      <view class="active-wrap">
+        <rich-text class="active-t">活动代码</rich-text>
+        <view class="active-bar">
+          <input class="weui-input" auto-focus placeholder="请输入活动代码" />
+          <button class="bt-submit">提交</button>
+        </view>
       </view>
-      <view class="product-info">
-        <text class="product-title">勃朗圣泉专研修护舒缓喷雾250ml</text>
-        <text class="product-title-m">常规50</text>
-        <text class="product-price">￥ 165.00</text>
-        <view class="stepper">
-        <!-- 减号 -->
-        <text class="{{minusStatus}}" bindtap="bindMinus">-</text>
-        <!-- 数值 -->
-        <input type="number" bindchange="bindManual" value="{{num}}" />
-        <!-- 加号 -->
-        <text class="normal" bindtap="bindPlus">+</text>
-      </view>
-      </view>
-    </view>
-    <!-- 活动代码 -->
-    <view class="active-wrap">
-      <rich-text class="active-t">活动代码</rich-text>
-      <view class="active-bar">
-        <input class="weui-input" auto-focus placeholder="请输入活动代码" />
-        <button class="bt-submit">提交</button>
-      </view>
-    </view>
-    <view class='de-list'>
-      <view class='de-list-t'>
-        <image src='http://139.224.72.205/images/loreal/cart/title.png'></image>
-      </view>
-      <view class='de-list-bd'>
-        <view class='de-list-c'>
-          <image src='http://139.224.72.205/images/loreal/de_es_img.jpg'></image>
-          <view>
-            <text class='de-list-text'>
+      <view class='de-list'>
+        <view class='de-list-t'>
+          <image src='http://139.224.72.205/images/loreal/cart/title.png'></image>
+        </view>
+        <view class='de-list-bd'>
+          <view class='de-list-c'>
+            <image src='http://139.224.72.205/images/loreal/de_es_img.jpg'></image>
+            <view>
+              <text class='de-list-text'>
+                小绷带修护霜 50ml
+              </text>
+            </view>
+            <view>
+              <text class='de-list-sm'>
+                对抗换季泛红
+              </text>
+            </view>
+            <view>
+              <text class='de-list-price'>
+                ￥285.00
+              </text>
+            </view>
+          </view>
+          <view class='de-list-c'>
+            <image src='http://139.224.72.205/images/loreal/de_es_img.jpg'></image>
+            <view>
+              <text class='de-list-text'>
               小绷带修护霜 50ml
             </text>
-          </view>
-          <view>
-            <text class='de-list-sm'>
+            </view>
+            <view>
+              <text class='de-list-sm'>
               对抗换季泛红
             </text>
-          </view>
-          <view>
-            <text class='de-list-price'>
+            </view>
+            <view>
+              <text class='de-list-price'>
               ￥285.00
             </text>
-          </view>
-        </view>
-        <view class='de-list-c'>
-          <image src='http://139.224.72.205/images/loreal/de_es_img.jpg'></image>
-          <view>
-            <text class='de-list-text'>
-            小绷带修护霜 50ml
-          </text>
-          </view>
-          <view>
-            <text class='de-list-sm'>
-            对抗换季泛红
-          </text>
-          </view>
-          <view>
-            <text class='de-list-price'>
-            ￥285.00
-          </text>
+            </view>
           </view>
         </view>
       </view>
     </view>
-
-  </view>
-  <view class="pay-bar">
-    <view>
-      <radio-group class="radio-group" bindchange="radioChange">
-          <radio color='#173c6b' bindtap="bindtapRadio" wx:for-items="{{goods}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}">
-            <text>全选</text>
-          </radio>
-        </radio-group>
-    </view>
-    <view>
+    <view class="pay-bar">
       <view>
-        <text>合计：</text>
-        <text>￥179.00</text>
+        <radio-group class="radio-group" bindchange="radioChange">
+            <radio color='#173c6b' bindtap="bindtapRadio" wx:for-items="{{goods}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}">
+              <text>全选</text>
+            </radio>
+          </radio-group>
       </view>
-      <text>（运费：￥0）</text>
+      <view>
+        <view>
+          <text>合计：</text>
+          <text>￥179.00</text>
+        </view>
+        <text>（运费：￥0）</text>
+      </view>
+      <button>前往支付</button>
     </view>
-    <button>前往支付</button>
   </view>
-<!-- </template> -->
+  <view wx:else class="no-goods">
+      <view class="title-box">
+          您的购物车是空的
+      </view>
+      <view class="to-index-btn" bindtap="toIndexPage">
+        立即购买喜爱的产品
+      </view>
+  </view>

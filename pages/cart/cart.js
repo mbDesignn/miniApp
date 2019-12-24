@@ -5,12 +5,19 @@ Page({
    * 页面的初始数据
    */
   data: {
+    list:[1,2],
     goods: [{
       name: 'USA',
       value: ''
     }],
     realVal: '',
     num: 1,
+  },
+  deleteGoods(){
+    console.log('+++')
+    this.setData({
+      list:[]
+    })
   },
   bindMinus() {
     if (this.data.num >= 2) {
@@ -51,7 +58,11 @@ Page({
       goods: items
     });
   },
-
+  toIndexPage(){
+   wx.switchTab({
+     url: '/pages/goods/goods'
+   })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

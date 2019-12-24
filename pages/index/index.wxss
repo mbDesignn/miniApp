@@ -349,6 +349,9 @@
   width: 750rpx;
   height:242rpx;
 }
+.navgation .navgation-title{
+  font-size: 26rpx;
+}
 .navgation{
   width:750rpx;
   height: 242rpx;

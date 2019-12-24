@@ -122,7 +122,7 @@ Page({
   },
   addToCart(){
     wx.switchTab({
-      url: '/pages/cartGroup/cartGroup'
+      url: '/pages/cart/cart'
     })
   },
   gotoBook(){

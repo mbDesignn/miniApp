@@ -49,7 +49,7 @@ Page({
     const self = this;
     wx.setClipboardData({
       //准备复制的数据
-      data: '微信号123456789',
+      data: 'sgmb1806',
       success: function (res) {
         self.setData({
           showOneButtonDialog: false

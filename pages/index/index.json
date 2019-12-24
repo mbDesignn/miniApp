@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "首页",
+  "navigationBarTitleText": "勃朗圣泉官方",
   "usingComponents": {
     "mp-searchbar": "../../weui/searchbar/searchbar"
   }

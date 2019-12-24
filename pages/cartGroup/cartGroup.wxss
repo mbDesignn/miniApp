@@ -1,7 +1,0 @@
-/* pages/cart/cart.wxss */
-
-@import "../cart/cart.wxss";
-@import "../template-cart/template-cart.wxss";
-
-
-
