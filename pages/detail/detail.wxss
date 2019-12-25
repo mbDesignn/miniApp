@@ -84,11 +84,22 @@
   padding-right:40rpx;
 	flex: 2;
   display: flex;
-  flex-direction: column;
-  justify-content:flex-start;
-  text-align: center;
+  justify-content:flex-end;
 }
-
+.de-h-share .share-content{
+  width: 38rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.share-content .share-img{
+  width: 19rpx;
+  height: 19rpx;
+}
+.share-content .share-text{
+  font-size: 18rpx;
+  color: #173c6b;
+}
 .de-list{
   padding-bottom: 30rpx;
 }
