@@ -12,7 +12,7 @@
 <swiper class="mybook-bd" current="{{currentTab}}" duration="300"  bindchange="swiperTab">
     <swiper-item ><view>全部</view></swiper-item>
     <swiper-item>
-       <view>
+       <view id="mjltest">
         <view class="mybook-no">
           <text>
             订单编号：123456789
@@ -76,7 +76,7 @@
       </view>
     </swiper-item>
     <swiper-item>
-      <view>
+      <view bindload='setContainerHeight'>
         <view class="mybook-no">
           <text>
             订单编号：123456789
@@ -110,7 +110,7 @@
       </view>
     </swiper-item>
     <swiper-item >
-      <view>
+      <view bindload='setContainerHeight'>
         <view class="mybook-no">
           <text>
             订单编号：123456789
@@ -137,7 +137,7 @@
       </view>
     </swiper-item>
     <swiper-item>
-      <view>
+      <view bindload='setContainerHeight'>
         <view class="mybook-no">
           <text>
             订单编号：123456789

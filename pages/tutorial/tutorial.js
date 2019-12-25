@@ -28,7 +28,7 @@ Page({
         data: '勃朗圣泉',
         success: function (res) {
           wx.showToast({
-            title: '复制勃朗圣泉成功',
+            title: '复制成功',
           });
         }
       })

@@ -137,7 +137,7 @@
           <text>198</text>
           <text>/40ml</text>
         </view>
-        <button data-goodsid="6">立即订购 ></button>
+        <button bindtap="gotoDetai" data-goodsid="6">立即订购 ></button>
         <!-- <text>舒新水为产品昵称，产品注册名为勃朗圣泉保湿修护精华水</text> -->
       </view>
     </view>

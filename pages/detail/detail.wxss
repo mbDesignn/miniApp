@@ -154,6 +154,7 @@
 .de-ft-info {
 	flex: 350rpx;
   display: flex;
+  margin-top:10rpx;
 }
 
 .de-ft-info > view{

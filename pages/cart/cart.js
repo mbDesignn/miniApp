@@ -62,6 +62,12 @@ Page({
      url: '/pages/goods/goods'
    })
   },
+  gotoDetai(e) {
+    console.log(e)
+    wx.navigateTo({
+      url: '/pages/detail/detail?goodsId=' + e.target.dataset.goodsid,
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

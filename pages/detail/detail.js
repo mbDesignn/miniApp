@@ -129,5 +129,10 @@ Page({
     wx.navigateTo({
       url: '/pages/book/book?goodsId='+this.data.goodsId
     })
+  },
+  goToIndex(){
+    wx.switchTab({
+      url: '/pages/index/index'
+    })
   }
 })

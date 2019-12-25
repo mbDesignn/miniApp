@@ -76,16 +76,16 @@
   </view>
   <view class='de-ft'>
     <view class="de-ft-info">
-      <view>
-        <image style="width:56rpx;height:43rpx;" src="../../static/images/logo.png"></image>
+      <view bindtap="goToIndex">
+        <image style="margin-bottom:2px;width:56rpx;height:40rpx;" src="../../static/images/logo.png"></image>
         <text>首页</text>
       </view>
       <view>
-        <mp-icon type="outline" icon="comment" color="gray" size="{{24}}"></mp-icon>
+        <image style="margin-bottom:2px;width:40rpx;height:40rpx;color:#898989;" src="/static/images/icon/kef1.png"></image>
         <text>客服</text>
       </view>
       <view bindtap="addToCart">
-        <mp-icon type="outline" icon="star" color="gray" size="{{24}}"></mp-icon>
+        <image style="margin-bottom:2px;width:40rpx;height:40rpx;color:#898989;" src="/static/images/icon/cart_detail1.png"></image>
         <text>购物车</text>
       </view>
     </view>

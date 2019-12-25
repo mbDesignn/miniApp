@@ -244,12 +244,12 @@
 /*数值*/
 
 .stepper input {
-  width: 70rpx;
+  width: 68rpx;
   height: 26rpx;
   float: left;
   margin: 0 auto;
   text-align: center;
-  font-size: 12px;
+  font-size: 12px; 
   /*给中间的input设置左右边框即可*/
   border-left: 1rpx solid #ccc;
   border-right: 1rpx solid #ccc;

@@ -13,7 +13,7 @@
           <image src="http://139.224.72.205/images/loreal/cart/mini_img.jpg"></image>
         </view>
         <view class="product-info">
-        <mp-icon style="position:absolute;top:-4px;right:40rpx;" type="outline" icon="delete" color="gray" size="{{16}}" bindtap="deleteGoods"></mp-icon>
+        <mp-icon style="position:absolute;top:-4px;right:25rpx;" type="outline" icon="delete" color="gray" size="{{16}}" bindtap="deleteGoods"></mp-icon>
           <text class="product-title">勃朗圣泉专研修护舒缓喷雾250ml</text>
           <text class="product-title-m">常规50</text>
           <text class="product-price">￥ 165.00</text>
@@ -41,7 +41,7 @@
         </view>
         <view class='de-list-bd'>
           <view class='de-list-c'>
-            <image src='http://139.224.72.205/images/loreal/de_es_img.jpg'></image>
+            <image  bindtap="gotoDetai" src='http://139.224.72.205/images/loreal/de_es_img.jpg'></image>
             <view>
               <text class='de-list-text'>
                 小绷带修护霜 50ml
@@ -59,7 +59,7 @@
             </view>
           </view>
           <view class='de-list-c'>
-            <image src='http://139.224.72.205/images/loreal/de_es_img.jpg'></image>
+            <image bindtap="gotoDetai" src='http://139.224.72.205/images/loreal/de_es_img.jpg'></image>
             <view>
               <text class='de-list-text'>
               小绷带修护霜 50ml
