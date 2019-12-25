@@ -87,17 +87,18 @@
   justify-content:flex-end;
 }
 .de-h-share .share-content{
-  width: 38rpx;
+  padding-top: 8rpx;
+  width: 44rpx;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .share-content .share-img{
-  width: 19rpx;
-  height: 19rpx;
+  width: 24rpx;
+  height: 24rpx;
 }
 .share-content .share-text{
-  font-size: 18rpx;
+  font-size: 20rpx;
   color: #173c6b;
 }
 .de-list{
