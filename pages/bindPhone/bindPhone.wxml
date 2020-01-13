@@ -1,0 +1,29 @@
+<!--pages/bindPhone/bindPhone.wxml-->
+<view class="info-wrap">
+<view class="address-wrap">
+  <view class="address-bd">
+    <view>
+      <text>用户名</text>
+      <input placeholder-class="phcolor" auto-focus placeholder="用户名"/>
+    </view>
+    <view>
+      <text>生日</text>
+      <input placeholder-class="phcolor" auto-focus placeholder="生日"/>
+    </view>
+    <view>
+      <text>手机号</text>
+      <input placeholder-class="phcolor" auto-focus placeholder="手机号"/>
+      <button class="getphone">获取手机号</button>
+    </view>
+    <view class="info-tips">
+      <label class="lab" for="box1">
+      <checkbox value="v1" checked class="checkbox"/></label>
+      <view>我同意依照本 使用条款 和 隐私政策 对我的个人信息进行收集和使用，我已阅读并确认已被充分机会理解该 使用条款 和 隐私政策 的内容</view>
+    </view>
+    <view>
+      <button class="bind-btn">确认绑定</button>
+    </view>
+  </view>
+</view>
+</view>
+

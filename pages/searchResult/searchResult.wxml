@@ -1,0 +1,17 @@
+<!--pages/searchResult/searchResult.wxml-->
+<view class="result-w">
+  <view class="result-t">
+  搜索结果
+  </view>
+  <view class="result-tt">
+  您搜索的"大白”共找到1个结果
+  </view>
+  <view class="result-bd">
+    <view class="result-bd-item">
+      <image  src='http://139.224.72.205/images/loreal/de_es_img.jpg'></image>
+      <view class="p-title">专研修护舒缓喷雾大白喷250ml</view>
+      <view class="p-title-t">￥165.00</view>
+      <button class="p-button">立即查看</button>
+    </view>
+  </view>
+</view>

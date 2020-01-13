@@ -1,0 +1,99 @@
+/* pages/bindPhone/bindPhone.wxss */
+/* .info-wrap{
+  padding:20rpx;
+  background:#f5f5f5;
+}
+.info-bd{
+  background:#fff;
+  border-radius: 10rpx;
+}
+.info-item{
+  height:92rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.info-label{
+  width:120rpx;
+} */
+.info-wrap{
+  padding:20rpx;
+  background:#f5f5f5;
+  height:100vh;
+}
+.address-w{
+  background: #f3f3f3;
+  height:100vh;
+}
+.address-bd{
+  padding:20rpx 32rpx 0;
+  background:#fff;
+  border-radius: 10rpx;
+}
+.address-bd > view{
+  display: flex;
+  align-items: center;
+  min-height: 92rpx;
+  border-bottom: 1px solid #f3f3f3;
+}
+.address-bd > view > text{
+  display: block;
+  /* width:146rpx; */
+}
+.address-bd > view > text:first-child{
+  width:146rpx;
+  /* padding-right:10rpx; */
+}
+
+.address-bd > view > input{
+  width: 300rpx;
+}
+
+.address-bd > view:last-of-type{
+  border-bottom:0rpx;
+  text-align: right;
+  vertical-align: top;
+  display: flex;
+  /* align-content: flex-end; */
+  /* justify-content: flex-end; */
+}
+.address-bd > view:nth-of-type(4){
+  border-bottom: 0rpx;
+}
+
+.phcolor{
+  color: #d2d2d2;
+}
+.address-btn::after{
+  border:0px;
+}
+.info-tips{
+  padding-top:20rpx;
+  text-align: left;
+  font-size: 20rpx;
+  border-bottom:0rpx;
+}
+.getphone{
+  padding: 10rpx;
+	width: 200rpx;
+	font-size: 30rpx;
+	line-height: 60rpx;
+	background-color: #173c6b;
+	border-radius: 5rpx;
+  color: #fff;
+}
+.bind-btn{
+  margin-top:26rpx;
+  margin-bottom: 50rpx;
+  width: 660rpx;
+	height: 75rpx;
+	line-height: 75rpx;
+	background-color: #173c6b;
+	border-radius: 5rpx;
+  color:#fff;
+}
+.checkbox{
+  position: relative;
+  top:-26rpx;
+  transform: scale(0.6,0.6)
+}

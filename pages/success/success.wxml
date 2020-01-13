@@ -1,0 +1,28 @@
+<!--pages/success/success.wxml-->
+<view class="success-w">
+  <view class="success-t">
+    恭喜您付款成功！
+  </view> 
+  <view class="success-bd">
+    <view class="success-item">
+      <view>订单编号：</view>
+      <view>xxxx</view>
+    </view>
+    <view class="success-item">
+      <view>下单日期：</view>
+      <view>xxxx</view>
+    </view>
+    <view class="success-item">
+      <view>订单状态：</view>
+      <view>xxxx</view>
+    </view>
+    <view class="success-item">
+      <view>订单金额：</view>
+      <view>xxxx</view>
+    </view>
+  </view>
+  <view class="success-btn">
+    <button>返回首页</button>
+    <button>查看订单</button>
+  </view>
+</view>
