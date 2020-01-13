@@ -13,7 +13,11 @@
     "pages/brandStory/brandStory",
     "pages/getCoupons/getCoupons",
     "pages/starProduct/starProduct",
-    "pages/cart/cart"
+    "pages/cart/cart",
+    "pages/inputInfo/inputInfo",
+    "pages/success/success",
+    "pages/searchResult/searchResult",
+    "pages/bindPhone/bindPhone"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -26,7 +30,8 @@
     "selectedColor": "#173c6b",
     "borderStyle": "white",
     "backgroundColor": "#fff",
-    "list": [{
+    "list": [
+      {
         "pagePath": "pages/index/index",
         "iconPath": "static/images/nav/home-off.png",
         "selectedIconPath": "static/images/nav/home-on.png",

@@ -125,6 +125,35 @@
 					"id": -1,
 					"name": "明星产品",
 					"pathName": "pages/starProduct/starProduct",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "完善信息",
+					"pathName": "pages/inputInfo/inputInfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "成功提示",
+					"pathName": "pages/success/success",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "搜索结果",
+					"pathName": "pages/searchResult/searchResult",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 15,
+					"name": "绑定手机",
+					"pathName": "pages/bindPhone/bindPhone",
+					"query": "",
 					"scene": null
 				}
 			]
